@@ -45,12 +45,12 @@ export const Footer = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap gap-12">
-                        {footerLinks.map(column => (
-                            <div className="flex flex-col min-w-[18rem] text-md">
+                        {footerLinks.map((column, index) => (
+                            <div key={index} className="flex flex-col min-w-[18rem] text-md">
                                 <h3 className="font-medium mb-6">{column.title}</h3>
                                 <ul>
-                                    {column.links.map(link => (
-                                        <li className="[&_a]:last:mb-0">
+                                    {column.links.map((link, index) => (
+                                        <li key={index} className="[&_a]:last:mb-0">
                                             <Link className="text-gray-400 mb-3 block hover:text-white transition-colors" href={link.href}>{link.title}</Link>
                                         </li>
                                     ))}
