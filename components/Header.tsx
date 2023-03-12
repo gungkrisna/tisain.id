@@ -33,7 +33,7 @@ export const Header = () => {
           >
             <ul
               className={classNames(
-                "flex h-[calc(100vh_-_var(--navigation-height))] flex-col ease-in",
+                "flex h-[calc(100vh_-_var(--navigation-height)_-_4.8rem)] flex-col ease-in",
                 "md:h-full md:flex-row md:items-center",
 
                 "[&_li]:mx-6 [&_li]:border-b [&_li]:border-zinc-800",

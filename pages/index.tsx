@@ -15,10 +15,10 @@ export default function Home() {
             <Hero>
               <HeroTitle>
                 Presentasi profesional,<br />
-                sesuai kebutuhan
+                sesuai kebutuhan.
               </HeroTitle>
               <HeroSubtitle>
-                Hemat waktu dan capai tujuan bersama Tisain. <br />
+                <span className="hidden md:block">Hemat waktu dan capai tujuan bersama Tisain. <br /></span>
                 Kami membantu pembuatan slide presentasi profesional secara tepat waktu, sesuai kebutuhan dan anggaran proyek Anda. 
               </HeroSubtitle>
               <img className="rounded-md" src="/images/google-slide.png" alt="Hero image"/>
