@@ -4,7 +4,7 @@
 
 @layer base {
     :root {
-        --navigation-height: 4.8rem;
+        --navigation-height: 6.4rem;
     }
 
     html {
@@ -26,6 +26,12 @@
     
     .text-cta-gradient {
         background: linear-gradient(0deg, rgb(255, 255, 255), rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.7) 100%);
+        background-clip: text;
+        color: transparent;
+    }
+
+    .text-deadline-cta-gradient {
+        background: radial-gradient(50% 84% at 50% 96.6%, rgb(199, 233, 255) 0%, rgb(255, 255, 255) 100%);
         background-clip: text;
         color: transparent;
     }

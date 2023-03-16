@@ -33,7 +33,7 @@ export const FooterCTABlock = () => {
                         </div>
                     ))}
                 </Marquee>
-                <Image className="mt-6 border-[0.25rem] border-white/25 border-solid border-b-0 rounded-t-2xl w-full h-auto" width="0" height="0" sizes="100vw" src="/images/google-slide.png" alt="CTA image" />
+                <Image className="mt-6 border-[0.25rem] border-white/25 border-solid border-b-0 rounded-t-2xl w-full h-auto" width="0" height="0" sizes="100vw" src="/images/templates/1023.jpg" alt="CTA image" />
             </Container>
         </section>
     )
