@@ -51,7 +51,8 @@ export const Header = ({ bgColor }: HeaderProps) => {
           <Link className="flex justify-start items-center " href="/">
             <Logo
               className="w-md h-md mr-3"
-              fill={backgroundColor !== defaultBackgroundColor ? "white" : "black"}
+              size={40}
+              dark={backgroundColor !== defaultBackgroundColor ? false : true}
             />
           </Link>
 

@@ -29,7 +29,7 @@ export const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between w-full gap-12">
                     <div className="flex flex-col md:max-w-3xl gap-6">
                         <div className="font-strong text-2xl">
-                            <Logo className="w-32 h-32 mb-12" fill="white" />
+                            <Logo className="mb-12" size={120}/>
                             Layanan Desain Presentasi Profesional
                         </div>
                         <div className="text-lg text-gray-400">

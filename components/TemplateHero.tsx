@@ -38,22 +38,20 @@ export const TemplateHero = () => {
                 <div className="relative">
                     <div className="flex justify-end">
                         <div className="flex flex-col overflow-hidden">
-                            <div>
                                 {dividedImages.map((images, index) => (
-                                    <Marquee key={index} className="my-4" speed={index === 1 ? 5 : 10} gradient={true} gradientColor={[16, 16, 16]}>
+                                    <Marquee key={index} speed={index === 1 ? 5 : 10} gradient={true} gradientColor={[16, 16, 16]}>
                                         {images.map((image, index) => (
-                                            <div key={index} className="mx-2 max-w-[30rem] max-h-[30rem]">
+                                            <div key={index} className="m-2 max-w-[30rem] max-h-[30rem]">
                                                 <Image src={image} alt={`Template ${index + 1}`} width={1000} height={1000} />
                                             </div>
                                         ))}
                                         {images.map((image, index) => (
-                                            <div key={index} className="mx-2 max-w-[30rem] max-h-[30rem]">
+                                            <div key={index} className="m-2 max-w-[30rem] max-h-[30rem]">
                                                 <Image src={image} alt={`Template ${index + 1}`} width={1000} height={1000} />
                                             </div>
                                         ))}
                                     </Marquee>
                                 ))}
-                            </div>
                         </div>
                     </div>
 
