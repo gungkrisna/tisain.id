@@ -2,7 +2,23 @@
     font-family: 'GT Walsheim Bold';
     src: url('../public/fonts/GT-Walsheim-Bold.ttf') format('truetype');
   }
+
 @font-face {
   font-family: 'Raleway ExtraBold';
   src: url ('../public/fonts/Raleway-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-Thin';
+  src: url('../public/fonts/Montserrat-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../public/fonts/Montserrat.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MontserratRoman-SemiBold';
+  src: url('../public/fonts/MontserratRoman-SemiBold.ttf') format('truetype');
 }
