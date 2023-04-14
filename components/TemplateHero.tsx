@@ -1,7 +1,7 @@
 import { Container } from "./Container";
 import { Button } from "./Button";
 import Marquee from "react-fast-marquee";
-import Image from "next/image"
+import Image from "next/image";
 
 export const TemplateHero = () => {
     const images = [
@@ -42,28 +42,15 @@ export const TemplateHero = () => {
                                 {dividedImages.map((images, index) => (
                                     <Marquee key={index} className="my-4" speed={index === 1 ? 5 : 10} gradient={true} gradientColor={[16, 16, 16]}>
                                         {images.map((image, index) => (
-
-                                            <Image
-                                                key={index}
-                                                width="0"
-                                                height="0"
-                                                sizes="100vw"
-                                                className="mx-2 max-w-[30rem] max-h-[30rem]"
-                                                src={image}
-                                                alt={`Template ${index + 1}`}
-                                            />
+                                            <div key={index} className="mx-2 max-w-[30rem] max-h-[30rem]">
+                                                <Image src={image} alt={`Template ${index + 1}`} width={1000} height={1000} />
+                                            </div>
                                         ))}
                                         {images.map((image, index) => (
-
-                                            <Image
-                                                key={index}
-                                                width="0"
-                                                height="0"
-                                                sizes="100vw"
-                                                className="mx-2 max-w-[30rem] max-h-[30rem]"
-                                                src={image}
-                                                alt={`Template ${index + 1}`}
-                                            />))}
+                                            <div key={index} className="mx-2 max-w-[30rem] max-h-[30rem]">
+                                                <Image src={image} alt={`Template ${index + 1}`} width={1000} height={1000} />
+                                            </div>
+                                        ))}
                                     </Marquee>
                                 ))}
                             </div>
@@ -88,5 +75,5 @@ export const TemplateHero = () => {
             </Container>
 
         </section>
-    );
-};
+    )
+}
