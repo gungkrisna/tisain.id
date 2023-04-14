@@ -92,8 +92,8 @@ export const PricingSection = () => {
                                             <div className=" text-gray-600">Per 10 slides</div>
                                         </span>
                                     </div>
-                                    {plan.features.map((feature) => (
-                                        <div className="my-4 flex gap-2">
+                                    {plan.features.map((feature, index) => (
+                                        <div className="my-4 flex gap-2" key={index}>
                                             <span>
                                                 <HiOutlineCheckCircle size={15} />
                                             </span>

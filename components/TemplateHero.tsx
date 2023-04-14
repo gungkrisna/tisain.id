@@ -1,6 +1,7 @@
 import { Container } from "./Container";
 import { Button } from "./Button";
 import Marquee from "react-fast-marquee";
+import Image from "next/image"
 
 export const TemplateHero = () => {
     const images = [
@@ -39,13 +40,30 @@ export const TemplateHero = () => {
                         <div className="flex flex-col overflow-hidden">
                             <div>
                                 {dividedImages.map((images, index) => (
-                                    <Marquee key={index} className="my-4" speed={index === 1 ? 5 : 10} gradient={true} gradientColor={[16,16,16]}>
+                                    <Marquee key={index} className="my-4" speed={index === 1 ? 5 : 10} gradient={true} gradientColor={[16, 16, 16]}>
                                         {images.map((image, index) => (
-                                            <img key={index} src={image} alt={`Template ${index + 1}`} className="mx-2 max-w-[30rem] max-h-[30rem]" />
+
+                                            <Image
+                                                key={index}
+                                                width="0"
+                                                height="0"
+                                                sizes="100vw"
+                                                className="mx-2 max-w-[30rem] max-h-[30rem]"
+                                                src={image}
+                                                alt={`Template ${index + 1}`}
+                                            />
                                         ))}
                                         {images.map((image, index) => (
-                                            <img key={index} src={image} alt={`Template ${index + 1}`} className="mx-2 max-w-[30rem] max-h-[30rem]" />
-                                        ))}
+
+                                            <Image
+                                                key={index}
+                                                width="0"
+                                                height="0"
+                                                sizes="100vw"
+                                                className="mx-2 max-w-[30rem] max-h-[30rem]"
+                                                src={image}
+                                                alt={`Template ${index + 1}`}
+                                            />))}
                                     </Marquee>
                                 ))}
                             </div>

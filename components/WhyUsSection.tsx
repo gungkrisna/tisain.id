@@ -41,7 +41,7 @@ export const WhyUsSection = () => {
                 </div>
                 <div className="flex flex-col md:flex-row gap-12 md:gap-12 px-12 lg:px-8">
                     {tisainFeatures.map((column, index) => (
-                        <div className="flex flex-col gap-12">
+                        <div className="flex flex-col gap-12" key={index}>
                             {column.features.map((feature, index) => (
                                 <div key={index} className="flex flex-col md:flex-row gap-3 flex-start items-center">
                                     <div className="w-[6rem] h-[6rem] bg-white rounded-full flex justify-center items-center">
