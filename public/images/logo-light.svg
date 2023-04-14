@@ -3,7 +3,7 @@
      <style>
        .cls-1 {
          font-size: 53.33px;
-         font-family: Montserrat-Thin, Montserrat;
+         font-family: Montserrat;
          font-weight: 200;
        }
 
@@ -13,7 +13,7 @@
        }
 
        .cls-2 {
-         font-family: MontserratRoman-SemiBold, Montserrat;
+         font-family: Montserrat;
          font-weight: 600;
        }
 
