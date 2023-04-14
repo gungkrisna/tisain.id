@@ -7,7 +7,7 @@ interface AnouncementBarProps {
 
 export const AnnouncementBar = ({ message, link }: AnouncementBarProps) => {
     return (
-        <div className="w-full bg-blue-500 text-white px-4 py-2 h-full">
+        <div className="w-full bg-tisain text-white px-4 py-2 h-full">
             <p className="text-center text-sm">
                 {message}
                 {link && (

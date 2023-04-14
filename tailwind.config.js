@@ -4,7 +4,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
- 
+
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
@@ -13,6 +13,7 @@ module.exports = {
       fontFamily: {
         regular: ['"SF-Pro Display"', '"-apple-system"', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', '"Open Sans"', '"Helvetica Neue"', '"sans-serif"'],
         strong: ['"GT Walsheim Bold"', '"-apple-system"', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', '"Open Sans"', '"Helvetica Neue"', '"sans-serif"'],
+        raleway: ['"Raleway ExtraBold"', '"GT Walsheim Bold"', '"-apple-system"', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', '"Open Sans"', '"Helvetica Neue"', '"sans-serif"']
       },
       fontSize: {
         xs: "1.3rem",
@@ -29,8 +30,8 @@ module.exports = {
         "8xl": ["8rem", "1.1"],
       },
       colors: {
-        white: "#fff",
-        background: "#000a12",
+        background: "#fff",
+        tisain: "#2C73A5"
       },
       spacing: {
         0: "0",
@@ -51,15 +52,13 @@ module.exports = {
         15: "6rem",
         16: "6.4rem",
         "navigation-height": "var(--navigation-height)",
-      }
+      },
+      backgroundImage: {
+        "primary-gradient": "linear-gradient(180deg, #000a12 0%, #000a12 100%)",
+        "whatsapp": "linear-gradient(180deg, #25D366 0%, #4fce5d 100%)",
+      },
     },
-    backgroundImage: {
-      "primary-gradient": "linear-gradient(180deg, #000a12 0%, #000a12 100%)",
-      "whatsapp": "linear-gradient(180deg, #25D366 0%, #25D366 100%)",
-    },
-    boxShadow: {
-      "whatsapp": "rgb(37 211 102 / 50%) 0px 1px 40px",
-    }
+
   },
   plugins: [],
 }

@@ -24,12 +24,12 @@ const footerLinks = [
 
 export const Footer = () => {
     return (
-        <footer className="py-[5.6rem] border-t border-white/[0.08] text-sm">
+        <footer className="py-[5.6rem] bg-black text-white border-t border-white/[0.08] text-sm">
             <Container className="flex flex-col w-full h-full">
                 <div className="flex flex-col md:flex-row justify-between w-full gap-12">
                     <div className="flex flex-col md:max-w-3xl gap-6">
                         <div className="font-strong text-2xl">
-                            <Logo className="w-32 h-32 mb-12" />
+                            <Logo className="w-32 h-32 mb-12" fill="white" />
                             Layanan Desain Presentasi Profesional
                         </div>
                         <div className="text-lg text-gray-400">

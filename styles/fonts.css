@@ -2,3 +2,7 @@
     font-family: 'GT Walsheim Bold';
     src: url('../public/fonts/GT-Walsheim-Bold.ttf') format('truetype');
   }
+@font-face {
+  font-family: 'Raleway ExtraBold';
+  src: url ('../public/fonts/Raleway-ExtraBold.ttf') format('truetype');
+}

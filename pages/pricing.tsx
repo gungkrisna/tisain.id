@@ -1,24 +1,20 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Hero } from '@/components/Hero';
 import { FooterCTABlock } from "@/components/FooterCTASection";
-import { DeadlineCTABlock } from "@/components/DeadlineCTASection";
+import { PricingSection } from "@/components/PricingSection";
 import { ComparisonSection } from "@/components/ComparisonSection";
-import { WhyUsSection } from '@/components/WhyUsSection';
 
 export async function getStaticProps() {
   return { props: { bgColor: "bg-background" } };
 }
 
-export default function Home() {
+export default function Pricing() {
   return (
     <>
       <Header />
       <main>
-        <Hero />
+        <PricingSection />
         <ComparisonSection />
-        <WhyUsSection />
-        <DeadlineCTABlock />
       </main>
       <FooterCTABlock />
       <Footer />

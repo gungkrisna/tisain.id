@@ -1,5 +1,4 @@
 import { Container } from "./Container";
-import { Hero, HeroTitle } from "./Hero";
 import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax";
 import { ImageGrid } from "./ImageGrid";
 import { Button } from "./Button";
@@ -40,6 +39,7 @@ export const DeadlineCTABlock = () => {
 
 
     return (
+        <section id="section-deadline" className="bg-[#121212]" data-color="bg-[#121212]/60">
         <ParallaxProvider>
             <ParallaxBanner
                 layers={[{
@@ -47,27 +47,30 @@ export const DeadlineCTABlock = () => {
                 },
 
                 ]}
-                className="aspect-[2/1] h-screen"
+                className="aspect-[2/1] h-screen bg-black"
             >
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <Hero>
-                        <HeroTitle className="font-strong text-deadline-cta-gradient text-5xl pointer-events-auto">
-                            Terkendala deadline?
-                            <br />
-                            Hubungi kami <br />— hemat waktu,
-                            <br />
-                            capai tujuan.
-                        </HeroTitle>
+                    <Container>
+                        <div className="text-center">
+                            <div className="my-6 font-strong text-deadline-cta-gradient text-4xl md:text-8xl pointer-events-auto">
+                                Terkendala deadline?
+                                <br />
+                                Hubungi kami <br />— hemat waktu,
+                                <br />
+                                capai tujuan.
+                            </div>
 
-                        <div className="pointer-events-auto">
-                            <Button href="#" variant="whatsapp-cta" size="xlarge">
-                                <div className="w-full text-center font-strong">WhatsApp Tisain.id</div>
-                            </Button>
+                            <div className="pointer-events-auto mt-12">
+                                <Button href="#" variant="whatsapp-cta" size="xlarge">
+                                    <div className="w-full text-center font-strong">WhatsApp Tisain.id</div>
+                                </Button>
+                            </div>
                         </div>
+                    </Container>
 
-                    </Hero>
                 </div>
             </ParallaxBanner>
         </ParallaxProvider>
+        </section>
     );
 };

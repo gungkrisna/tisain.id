@@ -4,11 +4,11 @@
 
 @layer base {
     :root {
-        --navigation-height: 6.4rem;
+        --navigation-height: 9rem;
     }
 
     html {
-        @apply bg-background font-regular text-white;
+        @apply bg-background font-regular;
         font-size: 62.5%;
     }
 }
@@ -36,4 +36,7 @@
         color: transparent;
     }
 
+    .software-3d-logo {
+        transform: perspective(10000px) rotateX(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0px);
+    }
 }

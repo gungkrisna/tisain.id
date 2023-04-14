@@ -1,8 +1,10 @@
 import Link from "next/link"
+import classNames from "classnames"
 import { cva, VariantProps } from "class-variance-authority"
 
 interface ButtonProps extends VariantProps<typeof buttonClasses> {
     children: React.ReactNode,
+    className?: string,
     href: string,
 }
 
@@ -10,10 +12,13 @@ const buttonClasses = cva("inline-flex items-center", {
     variants: {
         variant: {
             primary: "rounded-full bg-primary-gradient",
-            secondary: "",
-            whatsapp: "rounded-full bg-whatsapp hover:text-shadow hover:shadow-whatsapp",
-            "whatsapp-cta": "rounded-3xl bg-whatsapp hover:text-shadow hover:shadow-whatsapp",
-            "whatsapp-mobile-menu": "bg-whatsapp hover:text-shadow hover:shadow-whatsapp w-full",
+            "get-started-dark": "rounded-xl bg-[#121212] text-white hover:bg-[#121212]/80 hover:shadow-lg",
+            "get-started-light": "rounded-xl bg-white text-black hover:bg-white/80 border hover:shadow-lg",
+            "whatsapp-header": "rounded-full bg-whatsapp hover:drop-shadow-[0_0_4.8rem_rgba(37,211,102,.5)] transition duration-75 ease-in-out text-white",
+            "whatsapp-cta": "rounded-3xl bg-whatsapp hover:drop-shadow-[0_0_4.8rem_rgba(37,211,102,.5)] hover:scale-[1.1] transition-all duration-100 ease-in-out text-white",
+            "whatsapp-mobile-menu": "bg-whatsapp w-full text-white", 
+            "pricing": "bg-[#121212] w-full text-white py-7 hover:drop-shadow-[0_0_2.4rem_rgb(44,115,165,0.9)] transition duration-75 ease-in-out",
+            "pricing-popular": "bg-[#2C73A5] w-full text-white py-7 hover:drop-shadow-[0_0_2.4rem_rgb(44,115,165,0.9)] transition duration-75 ease-in-out",
         },
         size: {
             small: "text-xs px-3 h-7",
@@ -28,8 +33,8 @@ const buttonClasses = cva("inline-flex items-center", {
     },
 });
 
-export const Button = ({children, href, variant, size}: ButtonProps) => {
-    return <Link className={buttonClasses( {variant, size} )} href={href}>
+export const Button = ({children, href, variant, size, className}: ButtonProps) => {
+    return <Link className={classNames(buttonClasses( {variant, size} ), className)} href={href}>
         {children}
         </Link>
 }
