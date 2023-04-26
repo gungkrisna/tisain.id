@@ -55,7 +55,6 @@ export const PricingSection = () => {
     return (
         <section id="section-pricing" className='bg-white h-auto'>
             <div className="max-w-[120rem] mx-auto flex-row justify-between items-center py-navigation-height px-8">
-
                 <div className="flex flex-col">
                     <h2 className="font-raleway text-zinc text-8xl leading-tight text-center mt-3">Pricing</h2>
                     <div className="font-regular text-gray-600 text-center text-lg md:text-xl leading-[3.2rem] pt-6">
@@ -69,7 +68,7 @@ export const PricingSection = () => {
                         {pricingOptions.map((plan) => (
                             <div
                                 key={plan.name}
-                                className={`flex flex-col justify-between bg-white rounded-2xl overflow-hidden border border-black/5 shadow-xl  ${plan.isPopular && 'border-tisain'}`}
+                                className={`flex flex-col justify-between bg-white rounded-2xl overflow-hidden border border-black/5 shadow-xl  ${plan.isPopular && 'border-tisain border-2'}`}
                             >
                                 <div className="px-6 py-8">
                                     <div className="flex gap-2 justify-between align-middle relative">

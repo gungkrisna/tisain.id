@@ -5,19 +5,18 @@ import TisainLogo from "./Icons/TisainLogo";
 
 const footerLinks = [
     {
-        title: "Produk",
+        title: "Navigasi",
         links: [
-            { title: "Layanan", href: "/" },
-            { title: "Dukungan Software", href: "/" },
-            { title: "Template Presentasi", href: "/" },
-            { title: "Harga", href: "/" },
+            { title: "Testimoni", href: "" },
+            { title: "Template Presentasi", href: "template/" },
+            { title: "Pricing", href: "pricing/" },
         ]
     },
     {
         title: "Perusahaan",
         links: [
             { title: "Tentang kami", href: "/" },
-            { title: "Syarat dan ketentuan", href: "/" }
+            { title: "Syarat dan ketentuan", href: "tos/" }
         ]
     },
 ]

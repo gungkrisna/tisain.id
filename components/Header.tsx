@@ -48,7 +48,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
       )}
       <header className={`z-20 sticky top-0 left-0 w-full border-b font-regular text-white ${backgroundColor !== defaultBackgroundColor ? 'md:text-white' : 'md:text-black'} border-white/[0.08] backdrop-blur-md ${backgroundColor} `}>
         <Container className="flex h-navigation-height">
-          <Link className="flex justify-start items-center " href="/">
+          <Link className="flex justify-start items-center" href="/">
             <TisainLogo
               className="w-md h-md mr-3"
               size={4}
@@ -92,16 +92,13 @@ export const Header = ({ bgColor }: HeaderProps) => {
                   <Link href="/">Home</Link>
                 </li>
                 <li>
-                  <Link href="#">Produk</Link>
-                </li>
-                <li className="md:hidden lg:block">
                   <Link href="template/">Template</Link>
                 </li>
                 <li>
                   <Link href="#">Testimoni</Link>
                 </li>
                 <li>
-                  <Link href="pricing/">Harga</Link>
+                  <Link href="pricing/">Pricing</Link>
                 </li>
                 <li className="md:hidden lg:block">
                   <Link href="#">Tentang Kami</Link>
@@ -120,7 +117,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
             </nav>
           </div>
 
-          <div className="h-full hidden items-center md:flex md:justify-end">
+          <div className="h-full hidden md:flex items-center justify-end">
             <Button href="#" variant="get-started-light" size="medium">
               <div className="font-strong">Get Started</div>
             </Button>

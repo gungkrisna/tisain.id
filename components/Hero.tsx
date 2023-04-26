@@ -5,10 +5,10 @@ export const Hero = () => {
     return (
         <section id="section-hero" className="bg-background">
             <Container>
-                <div className="flex h-[60vh] flex-col md:flex-row justify-between py-24 gap-12">
+                <div className="flex min-h-[60vh] flex-col md:flex-row justify-between py-24 gap-12">
                     <div className="flex flex-col justify-center">
                         <h1 className="font-raleway text-black text-7xl">
-                            Layanan desain presentasi profesional.
+                            Layanan desain presentasi profesional on-demand.
                         </h1>
                         <p className="font-regular text-xl text-black/90 mt-6">
                             Tisain melayani pembuatan slide presentasi profesional secara tepat waktu, sesuai kebutuhan, dan anggaran proyek Anda.
