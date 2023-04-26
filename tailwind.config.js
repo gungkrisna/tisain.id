@@ -12,8 +12,9 @@ module.exports = {
     extend: {
       fontFamily: {
         regular: ['"SF-Pro Display"', '"-apple-system"', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', '"Open Sans"', '"Helvetica Neue"', '"sans-serif"'],
-        strong: ['"GT Walsheim Bold"', '"-apple-system"', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', '"Open Sans"', '"Helvetica Neue"', '"sans-serif"'],
-        raleway: ['"Raleway ExtraBold"', '"GT Walsheim Bold"', '"-apple-system"', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', '"Open Sans"', '"Helvetica Neue"', '"sans-serif"']
+        strong: ['var(--font-gt-walsheim)', '"-apple-system"', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', '"Open Sans"', '"Helvetica Neue"', '"sans-serif"'],
+        raleway: ['var(--font-raleway)', '"GT Walsheim Bold"', '"-apple-system"', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', '"Open Sans"', '"Helvetica Neue"', '"sans-serif"'],
+        montserrat: ['var(--font-montserrat)']
       },
       fontSize: {
         xs: "1.3rem",

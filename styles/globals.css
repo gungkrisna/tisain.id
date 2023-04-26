@@ -23,7 +23,7 @@
         background-clip: text;
         color: transparent;
     }
-    
+
     .text-cta-gradient {
         background: linear-gradient(0deg, rgb(255, 255, 255), rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.7) 100%);
         background-clip: text;
@@ -40,4 +40,3 @@
         transform: perspective(10000px) rotateX(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0px);
     }
 }
-

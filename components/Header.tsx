@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from "react";
 import { AnnouncementBar } from "./AnnouncementBar";
 import { Button } from "./Button";
 import { Container } from "./Container";
-import { Logo } from "./Icons/Logo";
+import TisainLogo from "./Icons/TisainLogo";
 
 interface HeaderProps {
   bgColor?: string;
@@ -49,9 +49,9 @@ export const Header = ({ bgColor }: HeaderProps) => {
       <header className={`z-20 sticky top-0 left-0 w-full border-b font-regular text-white ${backgroundColor !== defaultBackgroundColor ? 'md:text-white' : 'md:text-black'} border-white/[0.08] backdrop-blur-md ${backgroundColor} `}>
         <Container className="flex h-navigation-height">
           <Link className="flex justify-start items-center " href="/">
-            <Logo
+            <TisainLogo
               className="w-md h-md mr-3"
-              size={40}
+              size={4}
               dark={backgroundColor !== defaultBackgroundColor ? false : true}
             />
           </Link>

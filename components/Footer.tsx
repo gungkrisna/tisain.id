@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Container } from "./Container"
-import { Logo } from "./Icons/Logo"
 import { RiInstagramLine, RiWhatsappLine } from "react-icons/ri";
+import TisainLogo from "./Icons/TisainLogo";
 
 const footerLinks = [
     {
@@ -28,8 +28,8 @@ export const Footer = () => {
             <Container className="flex flex-col w-full h-full">
                 <div className="flex flex-col md:flex-row justify-between w-full gap-12">
                     <div className="flex flex-col md:max-w-3xl gap-6">
+                        <TisainLogo className="mb-12" size={12} />
                         <div className="font-strong text-2xl">
-                            <Logo className="mb-12" size={120}/>
                             Layanan Desain Presentasi Profesional
                         </div>
                         <div className="text-lg text-gray-400">
