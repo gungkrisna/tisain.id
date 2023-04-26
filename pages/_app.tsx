@@ -1,8 +1,14 @@
 import "@/styles/globals.css";
+import { Montserrat } from "next/font/google"
 import localFont from '@next/font/local'
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect } from "react";
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: "--font-montserrat"
+})
 
 const gtWalsheim = localFont({
   src: '../public/fonts/GT-Walsheim-Bold.ttf',
@@ -26,7 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
           content="width=device-width, height=device-height, initial-scale=1"
         />
       </Head>
-      <main className={`${gtWalsheim.variable} ${raleway.variable}`}>
+      <main className={`${gtWalsheim.variable} ${raleway.variable} ${montserrat.variable}`}>
         <Component {...pageProps} />
       </main>
     </>
