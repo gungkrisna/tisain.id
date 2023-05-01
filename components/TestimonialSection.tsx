@@ -28,24 +28,10 @@ const testimonialData = [
     stars: 2,
   },
   {
-    image: 'https://upload.wikimedia.org/wikipedia/commons/0/0f/Ada_lovelace.jpg',
-    name: 'Ada Lovelace',
-    testimony: 'The analytical engine has no pretensions to originate anything. It can do whatever we know how to order it to perform.',
-    company: 'Analytical Engine',
-    stars: 4,
-  },
-  {
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/230px-Albert_Einstein_Head.jpg',
     name: 'Albert Einstein',
     testimony: 'Imagination is more important than knowledge.',
     company: 'Theory of Relativity',
-    stars: 5,
-  },
-  {
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Sheryl_Sandberg_World_Economic_Forum_2013.jpg/1200px-Sheryl_Sandberg_World_Economic_Forum_2013.jpg',
-    name: 'Sheryl Sandberg',
-    testimony: 'If you\'re offered a seat on a rocket ship, don\'t ask what seat! Just get on.',
-    company: 'Facebook',
     stars: 5,
   },
   {
@@ -112,18 +98,21 @@ const settings = {
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
+        centerMode: false,
+        slidesToShow: 2,
       },
     },
     {
-      breakpoint: 768,
+      breakpoint: 778,
       settings: {
+        centerMode: false,
         slidesToShow: 1,
       },
     },
     {
       breakpoint: 480,
       settings: {
+        centerMode: false,
         slidesToShow: 1,
       },
     },
@@ -146,17 +135,15 @@ export const TestimonialSection = () => {
             className="cursor-pointer hidden lg:block absolute z-10 top-[50%]"
             onClick={() => slider?.current?.slickPrev()}
           />
-          <div className="relative max-w-[80vw] lg:max-w-[108rem] mx-auto">
+          <div className="relative max-w-[80vw] xl:max-w-[108rem] mx-auto">
             <Slider ref={slider} className="absolute min-w-[0] z-[1]" {...settings}>
               {testimonialData.map((testimonial, index) => (
-                <div key={index}>
-                  <TestimonialCard
-                    {...testimonial}
-                    className={
-                      index === Math.floor(testimonialData.length / 2) ? "slick-center" : ""
-                    }
-                  />
-                </div>
+                <TestimonialCard key={index}
+                  {...testimonial}
+                  className={
+                    index === Math.floor(testimonialData.length / 2) ? "slick-center" : ""
+                  }
+                />
               ))}
             </Slider>
             <div className="absolute top-[7.5rem] right-[0.7rem] hidden lg:block">
