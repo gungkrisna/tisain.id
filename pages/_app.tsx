@@ -4,6 +4,8 @@ import localFont from '@next/font/local'
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect } from "react";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const montserrat = Montserrat({
   subsets: ['latin'],

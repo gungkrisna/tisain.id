@@ -39,4 +39,8 @@
     .software-3d-logo {
         transform: perspective(10000px) rotateX(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0px);
     }
+
+    .slick-center .block {
+        @apply relative transform scale-[1.25] z-10 mx-8;
+    }
 }

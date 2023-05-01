@@ -14,26 +14,16 @@ const TemplateCard = ({ imgUrl, title }: TemplateCardProps) => {
 
   return (
     <div
-      className="block rounded-lg bg-white shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:bg-opacity-90"
+      className="block rounded-lg bg-white shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:bg-opacity-90 cursor-pointer"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      style={{ cursor: "pointer" }}
     >
-      <div style={{ position: "relative", overflow: "hidden" }}>
+      <div className="relative overflow-hidden">
         <a href="#!">
           <Image src={imgUrl} alt={title} width={1000} height={1000} />
         </a>
         {isHovering && (
-          <div
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-            }}
-          />
+          <div className="absolute top-0 bottom-0 w-full h-full bg-[rgba(0,0,0,.2)]" />
         )}
       </div>
       <div className="p-6">

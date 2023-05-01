@@ -8,8 +8,8 @@ export const ComparisonSection = () => {
 
                 <div className="flex flex-col">
                     <p className="font-regular text-white/70 text-md tracking-[.45rem] text-center">OUR WORK</p>
-                    <h2 className="font-raleway text-white text-5xl leading-tight text-center mt-3">Before & After</h2>
-                    <p className="font-regular text-white/80 text-center text-lg pt-6">Tim kami berpengalaman dalam membantu bisnis mewujudkan brand mereka menjadi lebih profesional.</p>
+                    <h2 className="font-raleway text-white text-6xl leading-tight text-center mt-3">Before & After</h2>
+                    <p className="font-regular text-white/80 text-center text-xl pt-6">Tim kami berpengalaman dalam membantu bisnis mewujudkan brand mereka menjadi lebih profesional.</p>
                 </div>
 
                 <div className="flex w-full mt-16">
