@@ -6,7 +6,6 @@ import { DeadlineCTABlock } from "@/components/DeadlineCTASection";
 import { ComparisonSection } from "@/components/ComparisonSection";
 import { WhyUsSection } from '@/components/WhyUsSection';
 import { TestimonialSection } from "@/components/TestimonialSection";
-import { BakFooterCTABlock } from "@/components/BakFooterCTASection";
 
 export async function getStaticProps() {
   return { props: { bgColor: "bg-background" } };
