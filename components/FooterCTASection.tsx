@@ -96,8 +96,9 @@ export const FooterCTABlock = () => {
                             width="0"
                             height="0"
                             sizes="100vw"
-                            src={"/images/vector/slides.png"}
-                            alt="CTA image"
+                            src={"/images/vector/slides_bg.png"}
+                            alt="CTA slide image"
+                            priority
                         />
 
                         <CarouselProvider
@@ -111,10 +112,11 @@ export const FooterCTABlock = () => {
                             infinite={true}
                             dragEnabled={false}
                             touchEnabled={false}
-                            className="mt-6 absolute transform -translate-y-[78%] pl-[0.25rem] pr-[0.25em] w-full h-full "
+                            interval={2000}
+                            className="mt-6 absolute transform -translate-y-[79%] sm:-translate-y-[76%] pl-[0.25rem] pr-[0.25em] w-full h-full "
 
                         >
-                            <Slider className="px-[15%]">
+                            <Slider className="px-[10%] sm:px-[15%]">
                                 {images.map((image, index) => (
                                     <Slide index={index} key={index}>
                                         <Image
@@ -122,7 +124,7 @@ export const FooterCTABlock = () => {
                                             width={1920}
                                             height={1080}
                                             src={image}
-                                            alt="CTA image"
+                                            alt={`Presentation ${index}`}
                                             priority
                                         />
                                     </Slide>

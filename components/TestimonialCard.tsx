@@ -14,7 +14,7 @@ interface TestimonialCardProps {
 export const TestimonialCard = ({ image, testimony, name, company, stars, className }: TestimonialCardProps) => {
 
     return (
-        <div className={`block py-6 px-6 my-10 md:my-40 mx-0 md:mx-4 lg:mx-8 rounded-2xl bg-white border-[0.25rem] border-black/5 shadow-md transition-all duration-300 ease-in-out hover:shadow-xl cursor-pointer ${className}`}>
+        <div className={`block py-6 px-6 my-10 md:my-40 mx-2 md:mx-4 lg:mx-8 rounded-2xl bg-white border-[0.25rem] border-black/5 shadow-md transition-all duration-300 ease-in-out hover:shadow-xl cursor-pointer ${className}`}>
             <div className="flex flex-row justify-start">
                 <RatingStars rating={stars} />
             </div>

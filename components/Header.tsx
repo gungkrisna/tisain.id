@@ -6,8 +6,7 @@ import { AnnouncementBar } from "./AnnouncementBar";
 import { Button } from "./Button";
 import { Container } from "./Container";
 import TisainLogo from "./Icons/TisainLogo";
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
-
+import { Link as ScrollLink, animateScroll as scroll, scroller } from 'react-scroll';
 
 interface HeaderProps {
   bgColor?: string;
@@ -18,7 +17,6 @@ export const Header = ({ bgColor }: HeaderProps) => {
 
   const defaultBackgroundColor = 'bg-background/[.7]';
   const [backgroundColor, setBackgroundColor] = useState(bgColor ? bgColor : defaultBackgroundColor);
-  const [hasScrolledToSection, setHasScrolledToSection] = useState(false);
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -97,9 +95,12 @@ export const Header = ({ bgColor }: HeaderProps) => {
                   <Link href="template/">Template</Link>
                 </li>
                 <li>
-                  <ScrollLink to="section-testimonial"
-                    spy={false} smooth={true} duration={500} href="#section-testimonial">Testimoni
-                  </ScrollLink>
+                  <Link href="/#section-testimonial"
+                    onClick={() => {
+                      if (isHamburgerMenuOpen) {
+                        setIsHamburgerMenuOpen(false);
+                      }
+                    }}>Testimoni</Link>
                 </li>
                 <li>
                   <Link href="pricing/">Pricing</Link>

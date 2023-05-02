@@ -124,12 +124,12 @@ export const TestimonialSection = () => {
 
   return (
     <section id="section-testimonial" className="bg-white h-auto">
-      <div className="max-w-[120rem] mx-auto grid py-navigation-height px-8">
+      <div className="max-w-[120rem] mx-auto grid py-[calc(2_*_var(--navigation-height))] px-8 xl:px-0">
         <h2 className="font-raleway text-zinc text-6xl leading-tight text-center mt-3">Testimoni</h2>
         <p className="font-regular text-gray-600 text-center text-xl pt-2">
           Kepuasan klien merupakan prioritas kami, lihat bagaimana tanggapan mereka mengenai Tisain.
         </p>
-        <div className="relative my-8">
+        <div className="relative">
           <StyledChevronLeft
             size={30}
             className="cursor-pointer hidden lg:block absolute z-10 top-[50%]"
