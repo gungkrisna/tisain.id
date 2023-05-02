@@ -57,8 +57,8 @@ const testimonialData = [
   },
   {
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Elon_Musk_2015.jpg/300px-Elon_Musk_2015.jpg',
-    name: 'Elon Musk',
-    testimony: 'You want to have a future where you\'re expecting things to be better, not one where you\'re expecting things to be worse.',
+    name: 'Harry Bōlz',
+    testimony: "Now I'm going to buy Tisain and delete it haha",
     company: 'SpaceX',
     stars: 3.5,
   },
@@ -123,7 +123,7 @@ export const TestimonialSection = () => {
   const slider = useRef<Slider>(null);
 
   return (
-    <section id="section-comparison" className="bg-white h-auto">
+    <section id="section-testimonial" className="bg-white h-auto">
       <div className="max-w-[120rem] mx-auto grid py-navigation-height px-8">
         <h2 className="font-raleway text-zinc text-6xl leading-tight text-center mt-3">Testimoni</h2>
         <p className="font-regular text-gray-600 text-center text-xl pt-2">

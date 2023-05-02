@@ -6,6 +6,8 @@ import { AnnouncementBar } from "./AnnouncementBar";
 import { Button } from "./Button";
 import { Container } from "./Container";
 import TisainLogo from "./Icons/TisainLogo";
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+
 
 interface HeaderProps {
   bgColor?: string;
@@ -95,7 +97,9 @@ export const Header = ({ bgColor }: HeaderProps) => {
                   <Link href="template/">Template</Link>
                 </li>
                 <li>
-                  <Link href="#">Testimoni</Link>
+                  <ScrollLink to="section-testimonial"
+                    spy={false} smooth={true} duration={500} href="#section-testimonial">Testimoni
+                  </ScrollLink>
                 </li>
                 <li>
                   <Link href="pricing/">Pricing</Link>
