@@ -21,12 +21,16 @@ const footerLinks = [
     },
 ]
 
-export const Footer = () => {
+interface FooterProps {
+    className?: string;
+}
+
+export const Footer = ( { className }: FooterProps ) => {
     return (
-        <footer className="py-[5.6rem] bg-black text-white border-t border-white/[0.08] text-sm">
+        <footer className={`${className} py-[6rem] bg-black text-white border-t border-white/[0.08] text-sm`}>
             <Container className="flex flex-col w-full h-full">
                 <div className="flex flex-col md:flex-row justify-between w-full gap-12">
-                    <div className="flex flex-col md:max-w-3xl gap-6">
+                    <div className="flex flex-col md:max-w-3xl gap-3">
                         <TisainLogo className="mb-12" size={12} />
                         <div className="font-strong text-2xl">
                             Layanan Desain Presentasi Profesional
@@ -36,10 +40,10 @@ export const Footer = () => {
                         </div>
                         <div className="flex flex-row text-lg gap-3 text-gray-200 [&_a:hover]:text-white [&_a:hover]:transition-colors">
                             <Link href="https://instagram.com/tisain.id__">
-                                <RiInstagramLine />
+                                <RiInstagramLine size={24}/>
                             </Link>
                             <Link href="https://wa.me/+6285238071534">
-                                <RiWhatsappLine />
+                                <RiWhatsappLine size={24} />
                             </Link>
                         </div>
                     </div>

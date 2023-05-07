@@ -101,7 +101,7 @@ export const PricingSection = () => {
                                     ))}
                                 </div>
                                 <div>
-                                    <Button href="#" variant="pricing" className={`${plan.isPopular && 'bg-tisain'}`} size="large">
+                                    <Button href="/new-order" variant="pricing" className={`${plan.isPopular && 'bg-tisain'}`} size="large">
                                         <div className="font-raleway w-full text-center">Pilih Paket</div>
                                     </Button>
                                 </div>

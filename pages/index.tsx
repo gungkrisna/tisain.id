@@ -6,6 +6,7 @@ import { DeadlineCTABlock } from "@/components/DeadlineCTASection";
 import { ComparisonSection } from "@/components/ComparisonSection";
 import { WhyUsSection } from '@/components/WhyUsSection';
 import { TestimonialSection } from "@/components/TestimonialSection";
+import { HighlightedFeatures } from "@/components/HighlightedFeatures";
 
 export async function getStaticProps() {
   return { props: { bgColor: "bg-background" } };
@@ -17,12 +18,15 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <HighlightedFeatures />
         <ComparisonSection />
         <WhyUsSection />
         <DeadlineCTABlock />
         <TestimonialSection />
       </main>
-      <FooterCTABlock />
+      <FooterCTABlock>
+        Let&apos;s Making<br />Something Great.
+      </FooterCTABlock>
       <Footer />
     </>
   )

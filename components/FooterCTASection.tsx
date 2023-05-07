@@ -53,7 +53,11 @@ const highlightedFeatures = [
     "Jaminan Uang Kembali*",
 ];
 
-export const FooterCTABlock = () => {
+interface FooterCTABlockProps {
+    children: React.ReactNode;
+}
+
+export const FooterCTABlock = ({ children }: FooterCTABlockProps) => {
         const [slide, setSlide] = useState(1);
 
         return (
@@ -61,7 +65,7 @@ export const FooterCTABlock = () => {
                 <Container className="flex flex-col w-full h-full justify-center pt-[10rem]">
                     <div className="text-center">
                         <div className="my-6 text-6xl md:text-8xl font-strong text-cta-gradient">
-                            Konsultasi gratis dengan profesional, sekarang.
+                            { children }
                         </div>
                     </div>
                     <div className="flex justify-center">
@@ -90,15 +94,17 @@ export const FooterCTABlock = () => {
                         ))}
                     </Marquee>
 
-                    <div className="relative">
+                    <div className="mt-6 flex flex-col rounded-t-2xl border-[0.25rem] overflow-hidden border-white/25 border-solid border-b-0 ">
                         <Image
-                            className="mt-6 border-[0.25rem] border-white/25 border-solid border-b-0 rounded-t-2xl w-full h-auto"
+                            className="w-full h-auto"
                             width="0"
                             height="0"
                             sizes="100vw"
                             src={"/images/vector/slides_bg.png"}
                             alt="CTA slide image"
                             priority
+                            quality={100}
+                            loading="eager"
                         />
 
                         <CarouselProvider
@@ -113,10 +119,10 @@ export const FooterCTABlock = () => {
                             dragEnabled={false}
                             touchEnabled={false}
                             interval={2000}
-                            className="mt-6 absolute transform -translate-y-[79%] sm:-translate-y-[76%] pl-[0.25rem] pr-[0.25em] w-full h-full "
+                            className="w-full py-0 md:pb-8 bg-white"
 
                         >
-                            <Slider className="px-[10%] sm:px-[15%]">
+                            <Slider className="px-[10%] sm:px-[15%] pt-4">
                                 {images.map((image, index) => (
                                     <Slide index={index} key={index}>
                                         <Image

@@ -12,7 +12,7 @@ const buttonClasses = cva("inline-flex items-center", {
     variants: {
         variant: {
             primary: "rounded-full bg-primary-gradient",
-            "get-started-dark": "rounded-xl bg-[#121212] text-white hover:bg-[#121212]/80 hover:shadow-lg",
+            "get-started-dark": "rounded-xl bg-gray-900 text-white hover:bg-gray-600 hover:shadow-lg",
             "get-started-light": "rounded-xl bg-white text-black hover:bg-white/80 border hover:shadow-lg",
             "whatsapp-header": "rounded-full bg-whatsapp hover:drop-shadow-[0_0_4.8rem_rgba(37,211,102,.5)] transition duration-75 ease-in-out text-white",
             "whatsapp-cta": "rounded-3xl bg-whatsapp hover:drop-shadow-[0_0_4.8rem_rgba(37,211,102,.5)] hover:scale-[1.1] transition-all duration-100 ease-in-out text-white",

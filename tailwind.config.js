@@ -14,7 +14,8 @@ module.exports = {
         regular: ['"SF-Pro Display"', '"-apple-system"', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', '"Open Sans"', '"Helvetica Neue"', '"sans-serif"'],
         strong: ['var(--font-gt-walsheim)', '"-apple-system"', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', '"Open Sans"', '"Helvetica Neue"', '"sans-serif"'],
         raleway: ['var(--font-raleway)', '"GT Walsheim Bold"', '"-apple-system"', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', '"Open Sans"', '"Helvetica Neue"', '"sans-serif"'],
-        montserrat: ['var(--font-montserrat)']
+        montserrat: ['var(--font-montserrat)'],
+        nunito: ['var(--font-nunito)'],
       },
       fontSize: {
         xs: "1.3rem",
@@ -31,7 +32,7 @@ module.exports = {
         "8xl": ["8rem", "1.1"],
       },
       colors: {
-        background: "#fff",
+        background: "rgb(249,250,251)",
         tisain: "#2C73A5"
       },
       spacing: {

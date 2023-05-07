@@ -20,7 +20,7 @@ const tisainFeatures = [
 
 export const WhyUsSection = () => {
     return (
-        <section id="section-why-us" className='bg-tisain h-auto'>
+        <section id="section-why-us" className='bg-tisain h-auto' data-color="bg-[#121212]/60">
             <div className="max-w-[120rem] mx-auto flex flex-col min-[1310px]:flex-row justify-between items-center gap-12 overflow-hidden md:overflow-visible py-16">
                 <div className="w-auto relative">
                     <div className="px-8 h-auto py-16 flex items-center">

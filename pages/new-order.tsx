@@ -1,8 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FooterCTABlock } from "@/components/FooterCTASection";
-import { PricingSection } from "@/components/PricingSection";
-import { ComparisonSection } from "@/components/ComparisonSection";
+import { OrderForm } from "@/components/OrderForm";
 
 export async function getStaticProps() {
   return { props: { bgColor: "bg-background" } };
@@ -13,8 +12,7 @@ export default function Pricing() {
     <>
       <Header />
       <main>
-        <PricingSection />
-        <ComparisonSection />
+        <OrderForm />
       </main>
       <FooterCTABlock>
         Konsultasi gratis dengan profesional, sekarang.

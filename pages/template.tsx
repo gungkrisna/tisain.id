@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { FooterCTABlock } from "@/components/FooterCTASection";
 import { TemplateHero } from "@/components/TemplateHero";
 import { TemplateHighlight } from "@/components/TemplateHighlight";
+import CustomTemplateCTA from "@/components/CustomTemplateCTA";
 
 export async function getStaticProps() {
     return { props: { bgColor: "bg-black" } };
@@ -15,8 +16,11 @@ export default function Template() {
             <main>
                 <TemplateHero />
                 <TemplateHighlight />
+                <CustomTemplateCTA />
             </main>
-            <FooterCTABlock />
+            <FooterCTABlock>
+                Let&apos;s Making<br />Something Great.
+            </FooterCTABlock>
             <Footer />
         </>
     )

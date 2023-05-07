@@ -106,7 +106,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
                   <Link href="pricing/">Pricing</Link>
                 </li>
                 <li className="md:hidden lg:block">
-                  <Link href="#">Tentang Kami</Link>
+                  <Link href="/about-us">Tentang Kami</Link>
                 </li>
               </ul>
               <div

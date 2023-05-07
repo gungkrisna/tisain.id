@@ -39,17 +39,17 @@ export const TemplateHero = () => {
             <Container>
                 <div className="relative">
                     <div className="flex justify-end">
-                        <div className="flex flex-col overflow-hidden gap-0">
+                        <div className="flex flex-col overflow-hidden gap-0 whitespace-nowrap">
                             {dividedImages.map((images, index) => (
                                 <Marquee key={index} speed={index === 1 ? 5 : 10} gradient={true} gradientColor={[16, 16, 16]}>
                                     {images.map((image, index) => (
                                         <div key={index} className="m-2 max-w-[30rem] max-h-[30rem]">
-                                            <Image src={image} alt={`Template ${index + 1}`} width={1000} height={1000} />
+                                            <Image src={image} alt={`Template ${index + 1}`} width={1000} height={1000} priority />
                                         </div>
                                     ))}
                                     {images.map((image, index) => (
                                         <div key={index} className="m-2 max-w-[30rem] max-h-[30rem]">
-                                            <Image src={image} alt={`Template ${index + 1}`} width={1000} height={1000} />
+                                            <Image src={image} alt={`Template ${index + 1}`} width={1000} height={1000} priority />
                                         </div>
                                     ))}
                                 </Marquee>
