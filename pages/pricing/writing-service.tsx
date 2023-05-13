@@ -5,6 +5,7 @@ import { PricingSection } from "@/components/PricingSection";
 import { ComparisonSection } from "@/components/ComparisonSection";
 import CustomTemplateCTA from "@/components/CustomTemplateCTA";
 import { useRouter } from 'next/router';
+import FloatingWhatsappButton from "@/components/FloatingWhatsAppButton";
 
 type Package = {
     isPopular: boolean;
@@ -60,8 +61,9 @@ export default function WritingService() {
                     title="Jasa Pengetikan"
                     description="Tuangkan ide Anda melalui sentuhan profesional Tisain."
                     pricingOptions={writingPricingOptions}
-                    pricingDescription="Per lembar"/>
+                    pricingDescription="Per lembar" />
             </main>
+            <FloatingWhatsappButton />
             <FooterCTABlock>
                 Konsultasi gratis dengan profesional, sekarang.
             </FooterCTABlock>

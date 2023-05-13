@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TOSSection } from "@/components/TOSSection";
+import FloatingWhatsappButton from "@/components/FloatingWhatsAppButton";
 
 export async function getStaticProps() {
   return { props: { bgColor: "bg-background" } };
@@ -13,6 +14,7 @@ export default function TOS() {
       <main>
         <TOSSection />
       </main>
+      <FloatingWhatsappButton />
       <Footer />
     </>
   )

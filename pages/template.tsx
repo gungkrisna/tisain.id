@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { FooterCTABlock } from "@/components/FooterCTASection";
 import { TemplateHero } from "@/components/TemplateHero";
 import { TemplateHighlight } from "@/components/TemplateHighlight";
+import FloatingWhatsappButton from "@/components/FloatingWhatsAppButton";
 
 export async function getStaticProps() {
     return { props: { bgColor: "bg-black" } };
@@ -16,6 +17,7 @@ export default function Template() {
                 <TemplateHero />
                 <TemplateHighlight />
             </main>
+            <FloatingWhatsappButton />
             <FooterCTABlock>
                 Let&apos;s Making<br />Something Great.
             </FooterCTABlock>
