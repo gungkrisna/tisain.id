@@ -36,20 +36,20 @@ export const ComparisonSection = () => {
                                 boundsPadding={10}
                                 changePositionOnHover
                                 itemOne={
-                                    <div className="bg-red-200 flex items-center justify-center text-2xl">
+                                    <div className="flex items-center justify-center text-2xl">
                                         <div className="absolute top-4 left-4">
-                                            <div className="bg-white w-auto h-auto rounded-xl py-2 px-4">
-                                                <p className="font-nunito text-lg">Before</p>
+                                            <div className="bg-white w-auto h-auto rounded-xl py-1 px-2 md:py-2 md:px-4">
+                                                <p className="font-nunito font-semibold text-sm md:text-lg">Before</p>
                                             </div>
                                         </div>
                                         <ReactCompareSliderImage alt="Before" src="/images/templates/1012.jpg" />
                                     </div>
                                 }
                                 itemTwo={
-                                    <div className="bg-red-200 flex items-center justify-center text-2xl">
+                                    <div className="flex items-center justify-center text-2xl">
                                         <div className="absolute top-4 right-4">
-                                            <div className="bg-white w-auto h-auto rounded-xl py-2 px-4">
-                                                <p className="font-nunito text-lg">After</p>
+                                            <div className="bg-white w-auto h-auto rounded-xl py-1 px-2 md:py-2 md:px-4">
+                                                <p className="font-nunito font-semibold text-sm md:text-lg">After</p>
                                             </div>
                                         </div>
                                         <ReactCompareSliderImage alt="After" src="/images/templates/1009.jpg" />
@@ -78,15 +78,16 @@ export const ComparisonSection = () => {
                         speed={60}
                         gradient={true}
                         gradientColor={[30, 41, 59]}
+                        gradientWidth={125}
                         pauseOnClick
                     >
                         {services.concat(services).map((feature, index) => (
                             <div
                                 key={index}
-                                className="flex items-center mx-4 gap-10"
+                                className="flex items-center mx-4 gap-6 md:gap-10"
                             >
-                                <svg className="h-10 w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42"><path d="M 22.605 2.202 L 28.508 13.001 C 28.68 13.314 28.937 13.571 29.249 13.743 L 40.079 19.646 C 40.373 19.806 40.618 20.042 40.788 20.329 C 40.959 20.616 41.049 20.944 41.049 21.278 C 41.049 21.612 40.959 21.94 40.788 22.227 C 40.618 22.514 40.373 22.75 40.079 22.91 L 29.281 28.821 C 28.97 28.992 28.713 29.246 28.539 29.554 L 22.636 40.353 C 22.476 40.647 22.24 40.891 21.953 41.062 C 21.666 41.233 21.338 41.323 21.004 41.323 C 20.67 41.323 20.342 41.233 20.055 41.062 C 19.768 40.891 19.532 40.647 19.372 40.353 L 13.469 29.554 C 13.295 29.246 13.038 28.992 12.727 28.821 L 1.928 22.91 C 1.635 22.75 1.39 22.514 1.22 22.227 C 1.049 21.94 0.959 21.612 0.959 21.278 C 0.959 20.944 1.049 20.616 1.22 20.329 C 1.39 20.042 1.635 19.806 1.928 19.646 L 12.727 13.743 C 13.04 13.571 13.297 13.314 13.469 13.001 L 19.372 2.202 C 19.534 1.917 19.769 1.679 20.053 1.514 C 20.337 1.348 20.66 1.261 20.988 1.261 C 21.317 1.261 21.64 1.348 21.924 1.514 C 22.207 1.679 22.442 1.917 22.605 2.202 Z" fill="rgba(255,255,255,.2)" /></svg>
-                                <span className="text-[rgba(255,255,255,.2)] text-9xl font-strong text-medium ">
+                                <svg className="h-6 w-6 md:h-10 md:w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42"><path d="M 22.605 2.202 L 28.508 13.001 C 28.68 13.314 28.937 13.571 29.249 13.743 L 40.079 19.646 C 40.373 19.806 40.618 20.042 40.788 20.329 C 40.959 20.616 41.049 20.944 41.049 21.278 C 41.049 21.612 40.959 21.94 40.788 22.227 C 40.618 22.514 40.373 22.75 40.079 22.91 L 29.281 28.821 C 28.97 28.992 28.713 29.246 28.539 29.554 L 22.636 40.353 C 22.476 40.647 22.24 40.891 21.953 41.062 C 21.666 41.233 21.338 41.323 21.004 41.323 C 20.67 41.323 20.342 41.233 20.055 41.062 C 19.768 40.891 19.532 40.647 19.372 40.353 L 13.469 29.554 C 13.295 29.246 13.038 28.992 12.727 28.821 L 1.928 22.91 C 1.635 22.75 1.39 22.514 1.22 22.227 C 1.049 21.94 0.959 21.612 0.959 21.278 C 0.959 20.944 1.049 20.616 1.22 20.329 C 1.39 20.042 1.635 19.806 1.928 19.646 L 12.727 13.743 C 13.04 13.571 13.297 13.314 13.469 13.001 L 19.372 2.202 C 19.534 1.917 19.769 1.679 20.053 1.514 C 20.337 1.348 20.66 1.261 20.988 1.261 C 21.317 1.261 21.64 1.348 21.924 1.514 C 22.207 1.679 22.442 1.917 22.605 2.202 Z" fill="rgba(255,255,255,.2)" /></svg>
+                                <span className="text-[rgba(255,255,255,.2)] text-4xl md:text-9xl font-strong">
                                     {feature}
                                 </span>
                             </div>

@@ -8,11 +8,11 @@ interface JoinUsSectionProps {
 
 const CustomTemplateCTA = ({ className }: JoinUsSectionProps) => {
     return (
-        <div className={`${className} bg-white py-16`}>
-            <Container>
+        <div className={`${className} py-16`}>
+            <div>
                 <div className="shadow-2xl">
-                    <div className="relative bg-gradient-to-b from-[#212121] to-tisain rounded-3xl pt-16 pb-0 lg:py-20">
-                        <div className="px-8 mx-auto sm:px-8 lg:px-12">
+                    <div className="relative bg-gradient-to-r from-[#313131] to-tisain rounded-3xl pt-16 pb-0 lg:py-20 overflow-hidden">
+                        <div className="px-8 mx-auto lg:px-12">
                             <div className="gap-y-12 gap-x-16 xl:gap-x-20">
                                 <div className="flex flex-col justify-start lg:max-w-[50%]">
                                     <div>
@@ -43,7 +43,7 @@ const CustomTemplateCTA = ({ className }: JoinUsSectionProps) => {
                         />
                     </div>
                 </div>
-            </Container>
+            </div>
         </div>
     )
 }

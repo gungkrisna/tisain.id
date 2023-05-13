@@ -7,16 +7,18 @@ const footerLinks = [
     {
         title: "Navigasi",
         links: [
-            { title: "Testimoni", href: "" },
-            { title: "Template Presentasi", href: "template/" },
-            { title: "Pricing", href: "pricing/" },
+            { title: "Testimoni", href: "/#section-testimonial" },
+            { title: "Template Presentasi", href: "/template/" },
+            { title: "Layanan Desain Presentasi", href: "/pricing/presentation-design-service" },
+            { title: "Layanan Pengetikan", href: "/pricing/writing-service" },
+            { title: "Layanan Event Organizer", href: "https://wa.me/+62881038352544", newTab: true },
         ]
     },
     {
         title: "Perusahaan",
         links: [
-            { title: "Tentang kami", href: "/" },
-            { title: "Syarat dan ketentuan", href: "tos/" }
+            { title: "Tentang kami", href: "/about-us/" },
+            { title: "Syarat dan ketentuan", href: "/tos/" }
         ]
     },
 ]
@@ -38,12 +40,12 @@ export const Footer = ( { className }: FooterProps ) => {
                         <div className="text-lg text-gray-400">
                             Tisain.id merupakan penyedia layanan jasa desain slide presentasi profesional on-demand.
                         </div>
-                        <div className="flex flex-row text-lg gap-3 text-gray-200 [&_a:hover]:text-white [&_a:hover]:transition-colors">
-                            <Link href="https://instagram.com/tisain.id__">
-                                <RiInstagramLine size={24}/>
+                        <div className="flex flex-row text-lg gap-4 mt-2 text-gray-200 [&_a:hover]:text-white [&_a:hover]:transition-colors">
+                            <Link href="https://instagram.com/tisain.id__" target="_blank">
+                                <RiInstagramLine size={30}/>
                             </Link>
-                            <Link href="https://wa.me/+6285238071534">
-                                <RiWhatsappLine size={24} />
+                            <Link href="https://wa.me/+62881038352544" target="_blank">
+                                <RiWhatsappLine size={30} />
                             </Link>
                         </div>
                     </div>
@@ -54,7 +56,7 @@ export const Footer = ( { className }: FooterProps ) => {
                                 <ul>
                                     {column.links.map((link, index) => (
                                         <li key={index} className="[&_a]:last:mb-0">
-                                            <Link className="text-gray-400 mb-3 block hover:text-white transition-colors" href={link.href}>{link.title}</Link>
+                                            <Link className="text-gray-400 mb-3 block hover:text-white transition-colors" href={link.href} target={link.newTab ? "_blank" : ""}>{link.title}</Link>
                                         </li>
                                     ))}
                                 </ul>

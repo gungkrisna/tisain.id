@@ -1,4 +1,5 @@
 import { Container } from "./Container";
+import CustomTemplateCTA from "./CustomTemplateCTA";
 import TemplateCard from "./TemplateCard";
 
 type Template = {
@@ -34,7 +35,7 @@ export const TemplateHighlight = () => {
     return (
         <section id="section-template-highlight" className="bg-white h-auto">
             <Container>
-                <div className="flex w-full justify-center py-16">
+                <div className="flex w-full justify-center pt-16">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {templates.map((template, index) => (
                             <TemplateCard
@@ -45,6 +46,7 @@ export const TemplateHighlight = () => {
                         ))}
                     </div>
                 </div>
+                <CustomTemplateCTA />
             </Container>
 
         </section>

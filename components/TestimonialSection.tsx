@@ -123,7 +123,7 @@ export const TestimonialSection = () => {
   const slider = useRef<Slider>(null);
 
   return (
-    <section id="section-testimonial" className="bg-white h-auto">
+    <section id="section-testimonial" className="bg-background h-auto">
       <div className="max-w-[120rem] mx-auto grid py-[calc(2_*_var(--navigation-height))] px-8 xl:px-0">
         <h2 className="font-raleway text-zinc text-6xl leading-tight text-center mt-3">Testimoni</h2>
         <p className="font-regular text-gray-600 text-center text-xl pt-2">

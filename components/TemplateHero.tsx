@@ -60,7 +60,7 @@ export const TemplateHero = () => {
                         <h1 className="mt-8 font-strong text-deadline-cta-gradient text-4xl md:text-8xl">
                             Jelajahi<br />Template Tisain
                         </h1>
-                        <p className="my-8 text-white text-2xl max-w-[80rem]">
+                        <p className="my-8 text-white text-2xl max-w-[80rem] lg:max-w-[70rem]">
                             Temukan desain template pilihan dari Tisain yang cocok untuk kebutuhan proyek Anda.<br />
                         </p>
 

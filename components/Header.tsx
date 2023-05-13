@@ -5,7 +5,9 @@ import { useEffect, useState, useRef } from "react";
 import { AnnouncementBar } from "./AnnouncementBar";
 import { Button } from "./Button";
 import { Container } from "./Container";
+import HeaderCard from "./HeaderCard";
 import TisainLogo from "./Icons/TisainLogo";
+import { FiChevronDown, FiChevronUp } from "react-icons/fi"
 import { Link as ScrollLink, animateScroll as scroll, scroller } from 'react-scroll';
 
 interface HeaderProps {
@@ -39,9 +41,26 @@ export const Header = ({ bgColor }: HeaderProps) => {
     };
   }, []);
 
+  const [isPricingExpandVisible, setIsPricingExpandVisible] = useState(false);
+  const [isMobilePricingExpandVisible, setIsMobilePricingExpandVisible] = useState(false);
+  const handlePricingOnMouseEnter = () => {
+    const isMobileBreakpoint = window.innerWidth < 768;
+    if (!isMobileBreakpoint) {
+      setIsPricingExpandVisible(true);
+    }
+  }
 
+  const handlePricingOnClick = () => {
+    const isMobileBreakpoint = window.innerWidth < 768;
+    if (isMobileBreakpoint) {
+      setIsMobilePricingExpandVisible(!isMobilePricingExpandVisible);
+    } else {
+      setIsPricingExpandVisible(true);
+    }
+  }
 
   return (
+
     <>
       {!isHamburgerMenuOpen && (
         <AnnouncementBar message="Tisain.id hadir di acara Bali Startup Expo 2023! Jangan lupa kunjungi tenant kami." link="https://balistartup.com/expo-2023/" />
@@ -73,7 +92,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
             >
               <ul
                 className={classNames(
-                  "flex h-[calc(100vh_-_var(--navigation-height)_-_4.8rem)] flex-col ease-in",
+                  "flex h-[calc(100vh_-_var(--navigation-height)_-_4.8rem)] overflow-auto flex-col ease-in",
                   "md:h-full md:flex-row md:items-center",
 
                   "[&_li]:mx-6 [&_li]:border-b [&_li]:border-zinc-800",
@@ -89,13 +108,18 @@ export const Header = ({ bgColor }: HeaderProps) => {
                 )}
               >
                 <li>
-                  <Link href="/">Home</Link>
+                  <Link href="/"
+                    onMouseEnter={() => setIsPricingExpandVisible(false)}
+                  >Home</Link>
                 </li>
                 <li>
-                  <Link href="template/">Template</Link>
+                  <Link href="/template/"
+                    onMouseEnter={() => setIsPricingExpandVisible(false)}
+                  >Template</Link>
                 </li>
                 <li>
                   <Link href="/#section-testimonial"
+                    onMouseEnter={() => setIsPricingExpandVisible(false)}
                     onClick={() => {
                       if (isHamburgerMenuOpen) {
                         setIsHamburgerMenuOpen(false);
@@ -103,10 +127,67 @@ export const Header = ({ bgColor }: HeaderProps) => {
                     }}>Testimoni</Link>
                 </li>
                 <li>
-                  <Link href="pricing/">Pricing</Link>
+
+                  <a
+                    className="cursor-pointer"
+                    onMouseEnter={handlePricingOnMouseEnter}
+                    onClick={handlePricingOnClick}
+                  >
+                    <div className="flex flex-row w-full items-center gap-1 justify-between">
+                      Pricing
+                      {isMobilePricingExpandVisible ? <FiChevronUp size={18} /> : <FiChevronDown size={18} className="opacity-50" />}
+                    </div>
+                  </a>
+
                 </li>
+
+                {isMobilePricingExpandVisible && (
+                  <li className="grid grid-cols-2 gap-2 md:hidden py-4">
+                    <HeaderCard
+                      href="/pricing/presentation-design-service"
+                      onClick={() => {
+                        setIsPricingExpandVisible(false);
+                        if (isHamburgerMenuOpen) {
+                          setIsHamburgerMenuOpen(false);
+                        }
+                      }}
+                      image="/images/templates/highlighted/120.jpeg"
+                      title="Desain &nbsp; Presentasi"
+                      shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'}
+                    />
+
+                    <HeaderCard
+                      href="/pricing/writing-service"
+                      onClick={() => {
+                        setIsPricingExpandVisible(false);
+                        if (isHamburgerMenuOpen) {
+                          setIsHamburgerMenuOpen(false);
+                        }
+                      }}
+                      image="/images/templates/highlighted/119.jpeg"
+                      title="Jasa &nbsp; Pengetikan"
+                      shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'}
+                    />
+
+                    <HeaderCard
+                      href="https://wa.me/+62881038352544"
+                      onClick={() => {
+                        setIsPricingExpandVisible(false);
+                        if (isHamburgerMenuOpen) {
+                          setIsHamburgerMenuOpen(false);
+                        }
+                      }}
+                      newTab
+                      image="/images/templates/highlighted/118.jpeg"
+                      title="Event &nbsp; Organizer"
+                      shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
+                  </li>
+                )}
+
                 <li className="md:hidden lg:block">
-                  <Link href="/about-us">Tentang Kami</Link>
+                  <Link href="/about-us"
+                    onMouseEnter={() => setIsPricingExpandVisible(false)}
+                  >Tentang Kami</Link>
                 </li>
               </ul>
               <div
@@ -131,13 +212,21 @@ export const Header = ({ bgColor }: HeaderProps) => {
           <div className="ml-auto md:hidden flex items-center">
             <Hamburger
               color={backgroundColor !== defaultBackgroundColor ? "white" : "black"}
-              size={20}
               label="Toggle menu"
               toggled={isHamburgerMenuOpen}
               toggle={setIsHamburgerMenuOpen}
+              rounded
             />
           </div>
         </Container>
+        <div className={`absolute top-navigation-height w-full p-8 shadow-md ease-in-out transition-all ${isPricingExpandVisible ? "opacity-100 duration-150" : "opacity-0 pointer-events-none duration-50"} ${backgroundColor !== defaultBackgroundColor ? "bg-[#121212]" : "bg-background"}`}
+          onMouseLeave={() => setIsPricingExpandVisible(false)}>
+          <Container className="flex flex-row gap-8">
+            <HeaderCard href="/pricing/presentation-design-service" onClick={() => setIsPricingExpandVisible(false)} image="/images/templates/highlighted/120.jpeg" title="Desain Presentasi" shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
+            <HeaderCard href="/pricing/writing-service" onClick={() => setIsPricingExpandVisible(false)} image="/images/templates/highlighted/119.jpeg" title="Jasa Pengetikan" shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
+            <HeaderCard href="https://wa.me/+62881038352544" onClick={() => setIsPricingExpandVisible(false)} newTab image="/images/templates/highlighted/118.jpeg" title="Event Organizer" shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
+          </Container>
+        </div>
       </header>
     </>
   );

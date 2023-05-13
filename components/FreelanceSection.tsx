@@ -7,9 +7,9 @@ interface JoinUsSectionProps {
 
 const FreelanceSection = ({ className }: JoinUsSectionProps) => {
     return (
-        <Container className={`${className} my-8`}>
-            <div className="shadow-2xl">
-                <div className="relative py-12 overflow-hidden bg-tisain rounded-xl sm:py-16 lg:py-20">
+        <div className={`${className} bg-tisain `}>
+            <Container>
+                <div className="relative py-12 overflow-hidden sm:py-16 lg:py-20">
                     <div className="absolute inset-0">
                         <Image
                             className="object-contain object-right w-full h-full transform scale-125"
@@ -19,7 +19,7 @@ const FreelanceSection = ({ className }: JoinUsSectionProps) => {
                         />
                     </div>
 
-                    <div className="relative px-4 mx-auto sm:px-6 lg:px-14">
+                    <div className="relative mx-auto">
                         <div className="relative">
                             <div className="absolute"></div>
 
@@ -41,7 +41,7 @@ const FreelanceSection = ({ className }: JoinUsSectionProps) => {
                                             <br />
                                             love to work with Tisain.
                                         </h1>
-                                        <p className="mt-6 text-sm font-normal font-regular leading-[1.85rem] text-white text-opacity-80 max-w-[70%]">
+                                        <p className="mt-6 text-md font-normal font-regular text-white text-opacity-80 md:max-w-[70%]">
                                             Tisain is an exclusive network of the top talent. Become one of our freelancers and get the chance to work with top companies and accelerate your career.
                                         </p>
                                     </div>
@@ -190,8 +190,9 @@ const FreelanceSection = ({ className }: JoinUsSectionProps) => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </Container>
+
+            </Container>
+        </div>
     )
 }
 

@@ -7,6 +7,7 @@ import { ComparisonSection } from "@/components/ComparisonSection";
 import { WhyUsSection } from '@/components/WhyUsSection';
 import { TestimonialSection } from "@/components/TestimonialSection";
 import { HighlightedFeatures } from "@/components/HighlightedFeatures";
+import FloatingWhatsappButton from "@/components/FloatingWhatsAppButton";
 
 export async function getStaticProps() {
   return { props: { bgColor: "bg-background" } };
@@ -24,6 +25,7 @@ export default function Home() {
         <DeadlineCTABlock />
         <TestimonialSection />
       </main>
+      <FloatingWhatsappButton />
       <FooterCTABlock>
         Let&apos;s Making<br />Something Great.
       </FooterCTABlock>

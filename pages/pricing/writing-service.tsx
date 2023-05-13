@@ -1,0 +1,72 @@
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { FooterCTABlock } from "@/components/FooterCTASection";
+import { PricingSection } from "@/components/PricingSection";
+import { ComparisonSection } from "@/components/ComparisonSection";
+import CustomTemplateCTA from "@/components/CustomTemplateCTA";
+import { useRouter } from 'next/router';
+
+type Package = {
+    isPopular: boolean;
+    name: string;
+    price: number;
+    features: string[];
+};
+
+const writingPricingOptions: Package[] = [
+    {
+        isPopular: false,
+        name: 'Mini',
+        price: 2.5,
+        features: [
+            'Pengerjaan 7 hari',
+            'Tanpa minimal order',
+            '1x revisi',
+        ],
+    },
+    {
+        isPopular: true,
+        name: 'Pro',
+        price: 3.5,
+        features: [
+            'Pengerjaan 3 hari',
+            'Tanpa minimal order',
+            '3x revisi',
+            'Cloud backup',
+        ],
+    },
+    {
+        isPopular: false,
+        name: 'Business',
+        price: 7,
+        features: [
+            'Pengerjaan 24 jam',
+            'Tanpa minimal order',
+            'Revisi unlimited',
+            'Cloud backup',
+        ],
+    },
+];
+
+export default function WritingService() {
+    const router = useRouter();
+    const { service } = router.query;
+
+    return (
+        <>
+            <Header />
+            <main>
+                <PricingSection
+                    title="Jasa Pengetikan"
+                    description="Tuangkan ide Anda melalui sentuhan profesional Tisain."
+                    pricingOptions={writingPricingOptions}
+                    pricingDescription="Per lembar"/>
+            </main>
+            <FooterCTABlock>
+                Konsultasi gratis dengan profesional, sekarang.
+            </FooterCTABlock>
+            <Footer />
+        </>
+
+    )
+}
