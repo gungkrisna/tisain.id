@@ -66,7 +66,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
         <AnnouncementBar message="Tisain.id hadir di acara Bali Startup Expo 2023! Jangan lupa kunjungi tenant kami." link="https://balistartup.com/expo-2023/" />
       )}
       <header className={`z-20 sticky top-0 left-0 w-full border-b font-regular text-white ${backgroundColor !== defaultBackgroundColor ? 'md:text-white' : 'md:text-black'} border-white/[0.08] backdrop-blur-md ${backgroundColor} `}>
-        <Container className="flex h-navigation-height">
+        <Container className="flex h-navigation-height ">
           <Link className="flex justify-start items-center" href="/">
             <TisainLogo
               className="w-md h-md mr-3"

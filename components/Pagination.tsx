@@ -22,7 +22,7 @@ const Pagination: React.FC<PaginationProps> = ({
             // Redirect to the last page if the current page is out of range
             router.push(`/templates/?page=${totalPages}`);
         }
-    }, [currentPage, totalPages]);
+    }, [currentPage, totalPages, router]);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputPage(Number(e.target.value));
