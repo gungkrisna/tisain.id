@@ -21,7 +21,7 @@ const SearchField: React.FC<Props> = ({ placeholder }) => {
       <div className="absolute inset-y-0 left-0 flex items-center pl-3">
         <BiSearch className="w-5 h-5" color="white"/>
       </div>
-      {showModal && <Spotlight onClose={() => setShowModal(false)} templates={templatesData} />}
+      {showModal && <Spotlight onClose={() => setShowModal(false)} />}
     </div>
   );
 };

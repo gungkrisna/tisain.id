@@ -8,7 +8,7 @@ const footerLinks = [
         title: "Navigasi",
         links: [
             { title: "Testimoni", href: "/#section-testimonial" },
-            { title: "Template Presentasi", href: "/template/" },
+            { title: "Template Presentasi", href: "/templates/" },
             { title: "Layanan Desain Presentasi", href: "/pricing/presentation-design-service" },
             { title: "Layanan Pengetikan", href: "/pricing/writing-service" },
             { title: "Layanan Event Organizer", href: "https://wa.me/+62881038352544", newTab: true },

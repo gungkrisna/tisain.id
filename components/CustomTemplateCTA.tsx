@@ -8,7 +8,7 @@ interface JoinUsSectionProps {
 
 const CustomTemplateCTA = ({ className }: JoinUsSectionProps) => {
     return (
-        <div className={`${className} py-16`}>
+        <Container className={`${className} py-16`}>
             <div>
                 <div className="shadow-2xl">
                     <div className="relative bg-gradient-to-r from-[#313131] to-tisain rounded-3xl pt-16 pb-0 lg:py-20 overflow-hidden">
@@ -26,7 +26,7 @@ const CustomTemplateCTA = ({ className }: JoinUsSectionProps) => {
 
                                     <div className="mt-8">
                                         <div className="w-md flex gap-4">
-                                            <Button href="#" variant="whatsapp-cta" size="large">
+                                            <Button href="https://wa.me/+62881038352544?text=Halo, saya tertarik dengan layanan custom desain presentasi Tisain." newTab variant="whatsapp-cta" size="large">
                                                 <div className="text-zinc font-strong">WhatsApp Tisain</div>
                                             </Button>
                                         </div>
@@ -44,7 +44,7 @@ const CustomTemplateCTA = ({ className }: JoinUsSectionProps) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Container>
     )
 }
 

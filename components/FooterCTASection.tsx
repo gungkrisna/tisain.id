@@ -13,36 +13,36 @@ import { RxCheck } from "react-icons/rx"; import {
 import "pure-react-carousel/dist/react-carousel.es.css";
 
 const images = [
-    "/images/templates/1001.jpg",
-    "/images/templates/1002.jpg",
-    "/images/templates/1003.jpg",
-    "/images/templates/1004.jpg",
-    "/images/templates/1005.jpg",
-    "/images/templates/1006.jpg",
-    "/images/templates/1007.jpg",
-    "/images/templates/1008.jpg",
-    "/images/templates/1009.jpg",
-    "/images/templates/1010.jpg",
-    "/images/templates/1011.jpg",
-    "/images/templates/1012.jpg",
-    "/images/templates/1013.jpg",
-    "/images/templates/1014.jpg",
-    "/images/templates/1015.jpg",
-    "/images/templates/1016.jpg",
-    "/images/templates/1017.jpg",
-    "/images/templates/1018.jpg",
-    "/images/templates/1019.jpg",
-    "/images/templates/1020.jpg",
-    "/images/templates/1021.jpg",
-    "/images/templates/1022.jpg",
-    "/images/templates/1023.jpg",
-    "/images/templates/1024.jpg",
-    "/images/templates/1025.jpg",
-    "/images/templates/1026.jpg",
-    "/images/templates/1027.jpg",
-    "/images/templates/1028.jpg",
-    "/images/templates/1029.jpg",
-    "/images/templates/1030.jpg",
+    "/images/templates/highlighted/1001.jpg",
+    "/images/templates/highlighted/1002.jpg",
+    "/images/templates/highlighted/1003.jpg",
+    "/images/templates/highlighted/1004.jpg",
+    "/images/templates/highlighted/1005.jpg",
+    "/images/templates/highlighted/1006.jpg",
+    "/images/templates/highlighted/1007.jpg",
+    "/images/templates/highlighted/1008.jpg",
+    "/images/templates/highlighted/1009.jpg",
+    "/images/templates/highlighted/1010.jpg",
+    "/images/templates/highlighted/1011.jpg",
+    "/images/templates/highlighted/1012.jpg",
+    "/images/templates/highlighted/1013.jpg",
+    "/images/templates/highlighted/1014.jpg",
+    "/images/templates/highlighted/1015.jpg",
+    "/images/templates/highlighted/1016.jpg",
+    "/images/templates/highlighted/1017.jpg",
+    "/images/templates/highlighted/1018.jpg",
+    "/images/templates/highlighted/1019.jpg",
+    "/images/templates/highlighted/1020.jpg",
+    "/images/templates/highlighted/1021.jpg",
+    "/images/templates/highlighted/1022.jpg",
+    "/images/templates/highlighted/1023.jpg",
+    "/images/templates/highlighted/1024.jpg",
+    "/images/templates/highlighted/1025.jpg",
+    "/images/templates/highlighted/1026.jpg",
+    "/images/templates/highlighted/1027.jpg",
+    "/images/templates/highlighted/1028.jpg",
+    "/images/templates/highlighted/1029.jpg",
+    "/images/templates/highlighted/1030.jpg",
 ];
 
 const highlightedFeatures = [
@@ -69,7 +69,7 @@ export const FooterCTABlock = ({ children }: FooterCTABlockProps) => {
                         </div>
                     </div>
                     <div className="flex justify-center">
-                        <Button href="#" variant="whatsapp-cta" size="xlarge">
+                        <Button href="https://wa.me/+62881038352544?text=Halo,%20saya%20mau%20tanya%20mengenai%20layanan%20Tisain." newTab variant="whatsapp-cta" size="xlarge">
                             <div className="w-full text-center font-strong">
                                 WhatsApp Tisain.id
                             </div>

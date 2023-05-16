@@ -113,7 +113,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
                   >Home</Link>
                 </li>
                 <li>
-                  <Link href="/template/"
+                  <Link href="/templates/"
                     onMouseEnter={() => setIsPricingExpandVisible(false)}
                   >Template</Link>
                 </li>
@@ -151,7 +151,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
                           setIsHamburgerMenuOpen(false);
                         }
                       }}
-                      image="/images/templates/highlighted/120.jpeg"
+                      image="/images/templates/highlighted/1001.jpg"
                       title="Desain &nbsp; Presentasi"
                       shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'}
                     />
@@ -164,7 +164,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
                           setIsHamburgerMenuOpen(false);
                         }
                       }}
-                      image="/images/templates/highlighted/119.jpeg"
+                      image="/images/templates/highlighted/1001.jpg"
                       title="Jasa &nbsp; Pengetikan"
                       shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'}
                     />
@@ -178,7 +178,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
                         }
                       }}
                       newTab
-                      image="/images/templates/highlighted/118.jpeg"
+                      image="/images/templates/highlighted/1001.jpg"
                       title="Event &nbsp; Organizer"
                       shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
                   </li>
@@ -196,7 +196,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
                   isHamburgerMenuOpen ? "sticky bottom-0" : ""
                 )}
               >
-                <Button href="#" variant="whatsapp-mobile-menu" size="large">
+                <Button href="https://wa.me/+62881038352544?text=Halo,%20saya%20mau%20tanya%20mengenai%20layanan%20Tisain." newTab variant="whatsapp-mobile-menu" size="large">
                   <div className="w-full text-center">Hubungi WhatsApp</div>
                 </Button>
               </div>
@@ -204,7 +204,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
           </div>
 
           <div className="h-full hidden md:flex items-center justify-end">
-            <Button href="#" variant="get-started-light" size="medium">
+            <Button href="https://wa.me/+62881038352544?text=Halo,%20saya%20mau%20tanya%20mengenai%20layanan%20Tisain." newTab variant="get-started-light" size="medium">
               <div className="font-strong">Get Started</div>
             </Button>
           </div>
@@ -222,9 +222,9 @@ export const Header = ({ bgColor }: HeaderProps) => {
         <div className={`absolute top-navigation-height w-full p-8 shadow-md ease-in-out transition-all ${isPricingExpandVisible ? "opacity-100 duration-150" : "opacity-0 pointer-events-none duration-50"} ${backgroundColor !== defaultBackgroundColor ? "bg-[#121212]" : "bg-background"}`}
           onMouseLeave={() => setIsPricingExpandVisible(false)}>
           <Container className="flex flex-row gap-8">
-            <HeaderCard href="/pricing/presentation-design-service" onClick={() => setIsPricingExpandVisible(false)} image="/images/templates/highlighted/120.jpeg" title="Desain Presentasi" shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
-            <HeaderCard href="/pricing/writing-service" onClick={() => setIsPricingExpandVisible(false)} image="/images/templates/highlighted/119.jpeg" title="Jasa Pengetikan" shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
-            <HeaderCard href="https://wa.me/+62881038352544" onClick={() => setIsPricingExpandVisible(false)} newTab image="/images/templates/highlighted/118.jpeg" title="Event Organizer" shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
+            <HeaderCard href="/pricing/presentation-design-service" onClick={() => setIsPricingExpandVisible(false)} image="/images/templates/highlighted/1001.jpg" title="Desain Presentasi" shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
+            <HeaderCard href="/pricing/writing-service" onClick={() => setIsPricingExpandVisible(false)} image="/images/templates/highlighted/1001.jpg" title="Jasa Pengetikan" shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
+            <HeaderCard href="https://wa.me/+62881038352544?text=Halo, saya tertarik dengan layanan Event Organizer Tisain." onClick={() => setIsPricingExpandVisible(false)} newTab image="/images/templates/highlighted/1001.jpg" title="Event Organizer" shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
           </Container>
         </div>
       </header>

@@ -46,7 +46,7 @@ export const PricingSection = ({
                     </div>
 
                     <div className="flex w-full mt-16 justify-center">
-                        <div className={`grid grid-cols-1 lg:grid-cols-${pricingOptions.length} md:grid-cols-${pricingOptions.length/2 < 2 ? pricingOptions.length : pricingOptions.length/2} w-full gap-4`}>
+                        <div className={`grid grid-cols-1 md:grid-cols-${pricingOptions.length/2 < 2 ? pricingOptions.length : pricingOptions.length/2} lg:grid-cols-${pricingOptions.length} w-full gap-4`}>
                             {pricingOptions.map((plan) => (
                                 <div
                                     key={plan.name}
@@ -89,7 +89,8 @@ export const PricingSection = ({
                                     </div>
                                     <div>
                                         <Button
-                                            href="/new-order"
+                                            href={`https://wa.me/+62881038352544?text=Halo, saya tertarik dengan paket ${plan.name} dari layanan ${title} Tisain.`}
+                                            newTab
                                             variant="pricing"
                                             className={`${plan.isPopular && "bg-tisain"}`}
                                             size="large"

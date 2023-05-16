@@ -6,6 +6,7 @@ import Head from "next/head";
 import { useEffect } from "react";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Analytics } from '@vercel/analytics/react'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -42,6 +43,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <main className={`${gtWalsheim.variable} ${raleway.variable} ${montserrat.variable} ${nunito.variable}`}>
         <Component {...pageProps} />
+        <Analytics />
       </main>
     </>
   );

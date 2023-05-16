@@ -1,6 +1,5 @@
 import { Button } from "./Button";
 import Image from "next/image";
-import { Container } from "./Container";
 
 export const Hero = () => {
     return (
@@ -21,7 +20,7 @@ export const Hero = () => {
 
                         <p className="mt-2 text-lg text-gray-600 sm:mt-6 font-inter">Tisain merupakan professional design agency yang melayani pembuatan slide presentasi, pengetikan, dan event organizer terpercaya sesuai kebutuhan dan anggaran proyek Anda.</p>
 
-                        <Button href="#" className="inline-flex px-8 py-4 mt-8 " variant="get-started-dark" size="large">
+                        <Button href="https://wa.me/+62881038352544?text=Halo,%20saya%20mau%20tanya%20mengenai%20layanan%20Tisain." newTab className="inline-flex px-8 py-4 mt-8 " variant="get-started-dark" size="large">
                             <div className="text-zinc font-strong">Get Started</div>
                         </Button>
 

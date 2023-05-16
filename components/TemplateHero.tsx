@@ -7,18 +7,18 @@ import { Link, animateScroll as scroll } from 'react-scroll';
 
 export const TemplateHero = () => {
     const images = [
-        "/images/templates/1001.jpg",
-        "/images/templates/1002.jpg",
-        "/images/templates/1003.jpg",
-        "/images/templates/1004.jpg",
-        "/images/templates/1005.jpg",
-        "/images/templates/1006.jpg",
-        "/images/templates/1007.jpg",
-        "/images/templates/1008.jpg",
-        "/images/templates/1009.jpg",
-        "/images/templates/1010.jpg",
-        "/images/templates/1011.jpg",
-        "/images/templates/1012.jpg",
+        "/images/templates/highlighted/1001.jpg",
+        "/images/templates/highlighted/1002.jpg",
+        "/images/templates/highlighted/1003.jpg",
+        "/images/templates/highlighted/1004.jpg",
+        "/images/templates/highlighted/1005.jpg",
+        "/images/templates/highlighted/1006.jpg",
+        "/images/templates/highlighted/1007.jpg",
+        "/images/templates/highlighted/1008.jpg",
+        "/images/templates/highlighted/1009.jpg",
+        "/images/templates/highlighted/1010.jpg",
+        "/images/templates/highlighted/1011.jpg",
+        "/images/templates/highlighted/1012.jpg",
     ];
 
     // Shuffle the images array
