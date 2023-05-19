@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Pagination from "@/components/Pagination";
 import CustomTemplateCTA from "@/components/CustomTemplateCTA";
+import { Container } from "@/components/Container";
 
 interface TemplateData {
   thumbnail: string;
@@ -55,7 +56,9 @@ const Templates = () => {
             router.push(`/templates/?page=${page}`);
           }}
         />
-        <CustomTemplateCTA />
+        <Container>
+          <CustomTemplateCTA />
+        </Container>
       </main>
       <FloatingWhatsappButton />
       <FooterCTABlock>

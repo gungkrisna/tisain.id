@@ -47,7 +47,7 @@ const FreelanceSection = ({ className }: JoinUsSectionProps) => {
                                     </div>
 
                                     <div className="mt-8 lg:mt-auto">
-                                        <div className="flex -space-x-2">
+                                        <div className="flex ml-1 -space-x-2">
                                             <Image
                                                 className="object-cover inline-block w-12 h-12 rounded-full sm:w-14 sm:h-14 ring-[3px] ring-white"
                                                 src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Hitler_portrait_crop.jpg"
@@ -99,7 +99,7 @@ const FreelanceSection = ({ className }: JoinUsSectionProps) => {
                                             />
                                         </div>
                                         <p className="mt-4 text-sm font-regular text-white">
-                                            Join other 250+ talent, worldwide.
+                                            Join with our talents, remotely worldwide.
                                         </p>
                                     </div>
                                 </div>

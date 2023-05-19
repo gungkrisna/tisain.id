@@ -52,7 +52,7 @@ export const DeadlineCTABlock = () => {
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                     <Container>
                         <div className="text-center">
-                            <div className="my-6 font-strong text-deadline-cta-gradient text-4xl md:text-8xl pointer-events-auto">
+                            <div className="my-6 font-strong text-deadline-cta-gradient text-5xl leading-tight md:text-8xl pointer-events-auto">
                                 Terkendala deadline?
                                 <br />
                                 Hubungi kami <br />— hemat waktu,

@@ -18,13 +18,13 @@ const studyCases: StudyCase[] = [
         image: "/images/study-case-2.png",
         title: "Bisnis",
         description:
-            "Setiap tim pasti akan membutuhkan presentasi yang menarik perhatian untuk membuat dunia melihat usaha mereka. Penjualan, pemasaran, atau SDM, Tisain hadir dengan layanan presentasi kami untuk membantu keseluruhan perusahaan Anda meraih keberhasilan.",
+            "Setiap tim pasti akan membutuhkan presentasi yang menarik perhatian untuk membuat dunia melihat usaha mereka. Penjualan, pemasaran, atau SDM, Tisain hadir dengan layanan presentasi kami untuk membantu keseluruhan bisnis Anda meraih kesuksesan.",
     },
     {
         image: "/images/study-case-3.jpg",
         title: "Event",
         description:
-            "Manajemen event merupakan hal yang tak mudah khususnya dalam menjangkau perhatian banyak orang. Layanan event organizer Tisain dapat membantu Anda untuk berhasil menggelar acara yang tak terlupakan.",
+            "Manajemen event merupakan hal yang tak mudah khususnya dalam meraih perhatian banyak orang. Layanan event organizer Tisain dapat membantu Anda untuk berhasil menggelar acara yang tak terlupakan.",
     },
 ];
 
@@ -59,10 +59,10 @@ export const AboutUsHero = () => {
                                     height={413}
                                 />
                                 <div className="flex flex-col gap-4 w-full">
-                                    <h3 className="text-lg font-raleway text-black">
+                                    <h3 className="text-xl font-raleway text-black">
                                         {studyCase.title}
                                     </h3>
-                                    <p className="text-gray-600 text-sm">
+                                    <p className="text-gray-600 text-md">
                                         {studyCase.description}
                                     </p>
                                 </div>
@@ -93,7 +93,7 @@ export const AboutUsHero = () => {
                                         </h3>
                                     ))}
                                 </div>
-                                <p className="text-gray-600 text-md text-justify">{studyCases[activeIndex].description}</p>
+                                <p className="text-gray-600 text-lg">{studyCases[activeIndex].description}</p>
                             </div>
                         </div>
                     </div>

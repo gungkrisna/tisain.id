@@ -19,7 +19,7 @@ export const ComparisonSection = () => {
 
                         <div className="flex flex-col">
                             <p className="font-regular text-white/70 text-md tracking-[.45rem] text-center">OUR WORK</p>
-                            <h2 className="font-raleway text-transparent bg-clip-text bg-gradient-to-r from-[rgb(94,159,206)] to-white text-5xl sm:text-6xl leading-tight text-center mt-3">Visualisasi dan interaktivitas <br className="hidden md:block" /> merupakan prioritas Tisain</h2>
+                            <h2 className="font-raleway text-transparent bg-clip-text bg-gradient-to-r from-[rgb(94,159,206)] to-white text-5xl leading-tight text-center mt-3">Visualisasi dan interaktivitas <br className="hidden md:block" /> merupakan prioritas Tisain</h2>
                             <p className="font-regular text-white/70 text-center text-xl pt-6">Tim kami berpengalaman dalam membantu bisnis dan profesional <br className="hidden md:block" />menyampaikan gagasan mereka dengan lebih baik.</p>
                             <Link href="/templates/" className="flex items-center justify-center gap-1 text-xl font-nunito font-semibold text-white hover:underline hover:cursor-pointer mt-12"
                             >

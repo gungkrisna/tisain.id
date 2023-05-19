@@ -11,14 +11,14 @@ export const Hero = () => {
             <div className="relative px-4 mx-auto max-w-[120rem] sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 gap-y-4 lg:items-center lg:grid-cols-2 xl:grid-cols-2">
                     <div className="text-center xl:col-span-1 lg:text-left md:px-16 lg:px-0 xl:pr-20">
-                        <h1 className="text-4xl font-bold leading-tight sm:text-5xl sm:leading-tight lg:text-7xl lg:leading-[1.1] text-gray-900 font-raleway">Professional designer on-demand untuk segala
+                        <h1 className="text-5xl font-bold leading-tight lg:text-7xl lg:leading-[1.1] text-gray-900 font-raleway">Professional designer on-demand untuk segala
                             <span className="relative inline-flex sm:inline">
                                 <span className="bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] blur-lg filter opacity-30 w-full h-full absolute inset-0"></span>
-                                <span className="relative text-4xl font-bold leading-tight sm:text-5xl sm:leading-tight lg:text-7xl lg:leading-[1.1] text-gray-900 font-raleway">&nbsp;pekerjaan.</span>
+                                <span className="relative text-5xl font-bold leading-tight lg:text-7xl lg:leading-[1.1] text-gray-900 font-raleway">&nbsp;pekerjaan.</span>
                             </span>
                         </h1>
 
-                        <p className="mt-2 text-lg text-gray-600 sm:mt-6 font-inter">Tisain merupakan professional design agency yang melayani pembuatan slide presentasi, pengetikan, dan event organizer terpercaya sesuai kebutuhan dan anggaran proyek Anda.</p>
+                        <p className="mt-2 text-lg md:text-lg text-gray-600 leading-[1.3] sm:mt-6 font-nunito">Tisain merupakan professional design agency yang melayani pembuatan slide presentasi, pengetikan, dan event organizer terpercaya sesuai kebutuhan dan anggaran proyek Anda.</p>
 
                         <Button href="https://wa.me/+62881038352544?text=Halo,%20saya%20mau%20tanya%20mengenai%20layanan%20Tisain." newTab className="inline-flex px-8 py-4 mt-8 " variant="get-started-dark" size="large">
                             <div className="text-zinc font-strong">Get Started</div>
@@ -55,7 +55,7 @@ export const Hero = () => {
 
                             <blockquote className="mt-6">
                                 <p className="text-lg font-bold text-gray-900 font-raleway">Best design agency in Bali!</p>
-                                <p className="mt-3 text-sm leading-7 text-gray-600 font-regular">Tisain telah membantu menyelesaikan segala kebutuhan desain dan pengetikan pada event saya, mulai dari membuat poster hingga mengatur susunan jalannya acara.</p>
+                                <p className="mt-3 text-sm leading-7 text-gray-600 font-nunito">Tisain telah membantu menyelesaikan segala kebutuhan desain dan pengetikan pada event saya, mulai dari membuat poster hingga mengatur susunan jalannya acara.</p>
                             </blockquote>
 
                             <div className="flex items-center justify-center mt-3 lg:justify-start ">

@@ -17,16 +17,16 @@ interface TemplateGridProps {
 
 export const TemplateGrid = ({ templates, header }: TemplateGridProps) => {
     return (
-        <section id="section-template-highlight" className="bg-background h-auto">
+        <section id="section-template-grid" className="bg-background h-auto">
             <Container>
                 <div className="flex flex-col w-full justify-center gap-4 py-16">
                     {header && (
                         <Link href="/templates" className="flex flex-row justify-between items-center">
-                            <h3 className="font-nunito font-bold text-3xl">{header}</h3>
+                            <h3 className="font-nunito font-bold text-2xl md:text-3xl">{header}</h3>
                             <div className="flex flex-row  gap-2 items-center font-nunito font-medium text-lg cursor-pointer hover:text-tisain">
-                                <h3>
+                                <p>
                                     Jelajahi
-                                </h3>
+                                </p>
                                 <span>
                                     <BsArrowRight size={18} />
                                 </span></div>

@@ -125,7 +125,7 @@ export const TestimonialSection = () => {
   return (
     <section id="section-testimonial" className="bg-background h-auto">
       <div className="max-w-[120rem] mx-auto grid py-[calc(2_*_var(--navigation-height))] px-8 xl:px-0">
-        <h2 className="font-raleway text-zinc text-6xl leading-tight text-center mt-3">Testimoni</h2>
+        <h2 className="font-raleway text-zinc bg-clip-text bg-gradient-to-r from-[rgb(94,159,206)] to-black text-5xl leading-tight text-center mt-3">Testimoni</h2>
         <p className="font-regular text-gray-600 text-center text-xl pt-2">
           Kepuasan klien merupakan prioritas kami, lihat bagaimana tanggapan mereka mengenai Tisain.
         </p>

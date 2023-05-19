@@ -13,7 +13,7 @@ const tisainFeatures = [
         col: 2,
         features: [
             { title: "Konsultasi Gratis", description: "Tim konsultan kami siap membantu klien dalam memilih tema, layout, dan gaya presentasi yang sesuai dengan konsep presentasi Anda.", image:"/images/feature-3.svg" },
-            { title: "Revisi Gratis*", description: "Tisain memberikan jaminan kepuasan pelanggan dengan menawarkan layanan revisi gratis sesuai paket yang dipih oleh klien*.", image:"/images/feature-4.svg" }
+            { title: "Revisi Gratis*", description: "Tisain memberikan jaminan kepuasan pelanggan melalui layanan revisi gratis sesuai paket yang dipih oleh klien*.", image:"/images/feature-4.svg" }
         ]
     }
 ]
@@ -26,7 +26,7 @@ export const WhyUsSection = () => {
                     <div className="px-8 h-auto py-16 flex items-center">
                         <div className="rounded-[1.6rem] h-[30rem] w-[30rem] bg-gradient-to-br from-tisain to-[#1C4562] drop-shadow-2xl p-7 flex flex-col justify-center items-center relative z-10">
                             <h2 className="font-raleway text-white text-5xl leading-tight">Mengapa TISAIN.ID?</h2>
-                            <p className="font-regular text-white/70 text-sm pt-3">Wujudkan presentasi yang memukai bersama Tisain.id</p>
+                            <p className="font-regular text-white/70 text-md pt-3">Wujudkan presentasi yang memukai bersama Tisain.id</p>
                         </div>
                     </div>
                     <div className="px-8 absolute inset-0 z-0 w-full h-auto flex items-center">
@@ -48,8 +48,8 @@ export const WhyUsSection = () => {
                                         <Image src={feature.image} alt="data" width="48" height="48" sizes="10" className="rounded-full"></Image>
                                     </div>
                                     <div className="flex flex-col text-center md:text-start md:max-w-sm">
-                                        <h3 className="font-strong text-white text-xl ">{feature.title}</h3>
-                                        <p className="font-regular text-white/70 text-sm pt-2">{feature.description}</p>
+                                        <h3 className="font-raleway text-white text-2xl ">{feature.title}</h3>
+                                        <p className="font-regular text-white/70 text-md pt-2">{feature.description}</p>
                                     </div>
                                 </div>
                             ))}

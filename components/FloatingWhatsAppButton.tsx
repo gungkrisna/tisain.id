@@ -11,9 +11,10 @@ const FloatingWhatsappButton = () => {
             newTab
             variant="whatsapp-cta"
             size="xlarge"
-            className="fixed bottom-8 right-8 z-[19] w-16 h-16 rounded-full bg-[#25D366] text-white flex justify-center items-center"
+            className="fixed bottom-8 right-8 z-[19] w-15 md:w-auto h-16 rounded-full  text-xl flex gap-3 justify-center items-center"
         >
             <span><BsWhatsapp size={30} /></span>
+            <span className="font-raleway hidden md:block">Chat</span>
         </Button>
     );
 };
