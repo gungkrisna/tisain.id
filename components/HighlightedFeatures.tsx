@@ -3,12 +3,13 @@ import { TbCoins, TbDiscount2, TbShieldCheck, TbWallet, } from "react-icons/tb"
 export const HighlightedFeatures = () => {
     return (
         <section id="section-highlighted-features" className="bg-background hidden lg:block">
-            <div className="pb-12 bg-[#212121]">
+            <div className="bg-transparent">
                 <div className="relative">
-                    <div className="absolute inset-0 h-1/2 bg-background pt-12"></div>
+                    <div className="absolute inset-0 h-1/2 bg-transparent pt-12"></div>
+                    <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-[#212121]"></div>
                     <div className="relative mx-auto">
                         <div className="max-w-[120rem] mx-auto">
-                            <div className=" bg-[#212121] w-full py-12 px-12 rounded-3xl drop-shadow-[0_2.4rem_4.8rem_rgb(255,255,255,.7)] border-[0.25rem] border-white/10 border-solid">
+                            <div className="bg-[#212121] w-full py-12 px-12 rounded-3xl drop-shadow-[0_2.4rem_4.8rem_rgb(255,255,255,.7)] border-[0.25rem] border-white/10 border-solid">
                                 <div className="flex justify-center gap-x-12 gap-y-4 items-center">
                                     <div className="flex justify-center text-gray-200  w-full items-center">
                                         <CgSandClock size={36} />

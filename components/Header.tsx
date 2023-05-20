@@ -8,21 +8,19 @@ import { Container } from "./Container";
 import HeaderCard from "./HeaderCard";
 import TisainLogo from "./Icons/TisainLogo";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi"
-import { Link as ScrollLink, animateScroll as scroll, scroller } from 'react-scroll';
+import Image from "next/image";
 
 interface HeaderProps {
   bgColor?: string;
 }
 
 export const Header = ({ bgColor }: HeaderProps) => {
-  const headerRef = useRef(null);
-
-  const defaultBackgroundColor = 'bg-background/[.7]';
+  const defaultBackgroundColor = "bg-background/[.7]";
   const [backgroundColor, setBackgroundColor] = useState(bgColor ? bgColor : defaultBackgroundColor);
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
 
   useEffect(() => {
-    const sections = document.querySelectorAll<HTMLElement>('[id^="section-"]');
+    const sections = document.querySelectorAll<HTMLElement>('[id^="section-"], [id^="page-"]');
     const handleScroll = () => {
       sections.forEach((section: HTMLElement) => {
         const sectionTop = section.getBoundingClientRect().top + window.pageYOffset - 90;
@@ -115,7 +113,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
                 <li>
                   <Link href="/templates/"
                     onMouseEnter={() => setIsPricingExpandVisible(false)}
-                  >Template</Link>
+                  >Templates</Link>
                 </li>
                 <li>
                   <Link href="/#section-testimonial"
@@ -141,8 +139,10 @@ export const Header = ({ bgColor }: HeaderProps) => {
 
                 </li>
 
+
+
                 {isMobilePricingExpandVisible && (
-                  <li className="grid grid-cols-2 gap-2 md:hidden py-4">
+                  <li className="[&_a]:h-auto grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden py-4">
                     <HeaderCard
                       href="/pricing/presentation-design-service"
                       onClick={() => {
@@ -151,8 +151,8 @@ export const Header = ({ bgColor }: HeaderProps) => {
                           setIsHamburgerMenuOpen(false);
                         }
                       }}
-                      image="/images/templates/highlighted/1001.jpg"
-                      title="Desain &nbsp; Presentasi"
+                      image="/images/products/presentation-design.jpg"
+                      title="Desain Presentasi"
                       shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'}
                     />
 
@@ -164,8 +164,8 @@ export const Header = ({ bgColor }: HeaderProps) => {
                           setIsHamburgerMenuOpen(false);
                         }
                       }}
-                      image="/images/templates/highlighted/1001.jpg"
-                      title="Jasa &nbsp; Pengetikan"
+                      image="/images/products/writing-service.jpg"
+                      title="Jasa Pengetikan"
                       shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'}
                     />
 
@@ -178,8 +178,8 @@ export const Header = ({ bgColor }: HeaderProps) => {
                         }
                       }}
                       newTab
-                      image="/images/templates/highlighted/1001.jpg"
-                      title="Event &nbsp; Organizer"
+                      image="/images/products/event-organizer.png"
+                      title="Event Organizer"
                       shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
                   </li>
                 )}
@@ -197,7 +197,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
                 )}
               >
                 <Button href="https://wa.me/+62881038352544?text=Halo,%20saya%20mau%20tanya%20mengenai%20layanan%20Tisain." newTab variant="whatsapp-mobile-menu" size="large">
-                  <div className="w-full text-center">Hubungi WhatsApp</div>
+                  <div className="w-full text-center">Hubungi Tisain</div>
                 </Button>
               </div>
             </nav>
@@ -222,9 +222,9 @@ export const Header = ({ bgColor }: HeaderProps) => {
         <div className={`absolute top-navigation-height w-full p-8 shadow-md ease-in-out transition-all ${isPricingExpandVisible ? "opacity-100 duration-150" : "opacity-0 pointer-events-none duration-50"} ${backgroundColor !== defaultBackgroundColor ? "bg-[#121212]" : "bg-background"}`}
           onMouseLeave={() => setIsPricingExpandVisible(false)}>
           <Container className="flex flex-row gap-8">
-            <HeaderCard href="/pricing/presentation-design-service" onClick={() => setIsPricingExpandVisible(false)} image="/images/templates/highlighted/1001.jpg" title="Desain Presentasi" shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
-            <HeaderCard href="/pricing/writing-service" onClick={() => setIsPricingExpandVisible(false)} image="/images/templates/highlighted/1001.jpg" title="Jasa Pengetikan" shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
-            <HeaderCard href="https://wa.me/+62881038352544?text=Halo, saya tertarik dengan layanan Event Organizer Tisain." onClick={() => setIsPricingExpandVisible(false)} newTab image="/images/templates/highlighted/1001.jpg" title="Event Organizer" shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
+            <HeaderCard href="/pricing/presentation-design-service" onClick={() => setIsPricingExpandVisible(false)} image="/images/products/presentation-design.png" title="Desain Presentasi" shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
+            <HeaderCard href="/pricing/writing-service" onClick={() => setIsPricingExpandVisible(false)} image="/images/products/writing-service.jpg" title="Jasa Pengetikan" shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
+            <HeaderCard href="https://wa.me/+62881038352544?text=Halo, saya tertarik dengan layanan Event Organizer Tisain." onClick={() => setIsPricingExpandVisible(false)} newTab image="/images/products/event-organizer.png" title="Event Organizer" shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'} />
           </Container>
         </div>
       </header>

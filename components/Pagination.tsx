@@ -9,11 +9,11 @@ interface PaginationProps {
     onPageChange: (page: number) => void;
 }
 
-const Pagination: React.FC<PaginationProps> = ({
+const Pagination = ({
     currentPage,
     totalPages,
     onPageChange,
-}) => {
+}: PaginationProps) => {
     const router = useRouter();
     const [inputPage, setInputPage] = useState<number>(currentPage);
 
@@ -58,7 +58,7 @@ const Pagination: React.FC<PaginationProps> = ({
     };
 
     return (
-        <div className="flex items-center justify-center mt-6">
+        <section id="section-pagination" className="bg-background flex items-center justify-center pt-6">
             {currentPage > 1 && (
                 <>
                     <Link
@@ -116,7 +116,7 @@ const Pagination: React.FC<PaginationProps> = ({
                     <FaChevronRight className="w-3 h-3 text-gray-600" />
                 </Link>
             )}
-        </div>
+        </section>
     );
 };
 

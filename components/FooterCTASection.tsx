@@ -6,9 +6,7 @@ import Marquee from "react-fast-marquee";
 import { RxCheck } from "react-icons/rx"; import {
     CarouselProvider,
     Slider,
-    Slide,
-    ButtonBack,
-    ButtonNext
+    Slide
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 

@@ -25,8 +25,8 @@ export const PricingSection = ({
 }: PricingSectionProps) => {
     return (
         <section id="section-pricing" className="bg-background h-auto">
-            <div className="bg-gradient-to-t from-tisain/25 to-white ">
-                <div className="md:max-w-[120rem] mx-auto flex-row justify-between items-center py-navigation-height px-8">
+            <div className="bg-gradient-to-t from-tisain/25 to-white py-navigation-height">
+                <div className="md:max-w-[120rem] mx-auto flex-row justify-between items-center px-8">
                     <div className="flex flex-col items-center">
                         <div className="inline-block pb-4">
                             <div className="inline-block bg-gradient-to-r from-tisain/10 to-tisain/25 rounded-full py-1 px-3 md:py-2 md:px-4">
@@ -107,8 +107,8 @@ export const PricingSection = ({
                             ))}
                         </div>
                     </div>
-                    {cta}
                 </div>
+                {cta}
             </div >
         </section >
     );

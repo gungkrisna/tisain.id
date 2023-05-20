@@ -17,7 +17,7 @@ export const TemplateDetailHero = ({
     slug, title, tags, author
 }: TemplateDetailHeroProps) => {
     return (
-        <section id="section-pricing" className="bg-background h-auto">
+        <section id="section-template-detail-hero" className="bg-background h-auto">
             <div className="bg-gradient-to-t from-tisain/25 to-white ">
                 <Container className="flex flex-col items-start py-[calc(var(--navigation-height)_/_2)]">
                     <div className="inline-block pb-8">

@@ -3,6 +3,7 @@ import { Container } from "./Container";
 import CustomTemplateCTA from "./CustomTemplateCTA";
 import TemplateCard from "./TemplateCard";
 import Link from "next/link";
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
 interface Template {
     thumbnail: string;
@@ -12,36 +13,53 @@ interface Template {
 
 interface TemplateGridProps {
     templates: Template[];
+    templatesLength: number;
     header?: string;
+    isLoading?: boolean;
+    className?: string;
 }
 
-export const TemplateGrid = ({ templates, header }: TemplateGridProps) => {
+export const TemplateGrid = ({
+    templates,
+    templatesLength,
+    header,
+    isLoading,
+    className,
+}: TemplateGridProps) => {
     return (
-        <section id="section-template-grid" className="bg-background h-auto">
+        <section id="section-template-grid" className={`bg-background h-auto ${className}`}>
             <Container>
                 <div className="flex flex-col w-full justify-center gap-4 py-16">
                     {header && (
                         <Link href="/templates" className="flex flex-row justify-between items-center">
                             <h3 className="font-nunito font-bold text-2xl md:text-3xl">{header}</h3>
-                            <div className="flex flex-row  gap-2 items-center font-nunito font-medium text-lg cursor-pointer hover:text-tisain">
-                                <p>
-                                    Jelajahi
-                                </p>
+                            <div className="flex flex-row gap-2 items-center font-nunito font-medium text-lg cursor-pointer hover:text-tisain">
+                                <p>Jelajahi</p>
                                 <span>
                                     <BsArrowRight size={18} />
-                                </span></div>
+                                </span>
+                            </div>
                         </Link>
                     )}
 
+                    
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {templates.map((template, index) => (
-                            <TemplateCard
-                                key={index}
-                                thumbnail={template.thumbnail}
-                                title={template.title}
-                                slug={template.slug}
-                            />
-                        ))}
+                        {isLoading ? (
+                            Array.from({ length: templatesLength }).map((_, index) => (
+                                <TemplateCard key={index} />
+                            ))
+                        ) : (
+                            templates.map((template, index) => (
+                                <div className="relative" key={index}>
+                                    <TemplateCard
+                                        thumbnail={template.thumbnail}
+                                        title={template.title}
+                                        slug={template.slug}
+                                    />
+                                </div>
+                            ))
+                        )}
                     </div>
                 </div>
             </Container>

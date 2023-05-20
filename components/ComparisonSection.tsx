@@ -36,13 +36,13 @@ export const ComparisonSection = () => {
                                 boundsPadding={10}
                                 changePositionOnHover
                                 itemOne={
-                                    <div className="flex items-center justify-center text-2xl">
+                                    <div className="flex items-center justify-center text-2xl filter grayscale">
                                         <div className="absolute top-4 left-4">
                                             <div className="bg-white w-auto h-auto rounded-xl py-1 px-2 md:py-2 md:px-4">
                                                 <p className="font-nunito font-semibold text-sm md:text-lg">Before</p>
                                             </div>
                                         </div>
-                                        <ReactCompareSliderImage alt="Before" src="/images/templates/highlighted/1012.jpg" />
+                                        <ReactCompareSliderImage alt="Before" src="/images/comparison/before-tisain-1.jpg"/>
                                     </div>
                                 }
                                 itemTwo={
@@ -52,7 +52,7 @@ export const ComparisonSection = () => {
                                                 <p className="font-nunito font-semibold text-sm md:text-lg">After</p>
                                             </div>
                                         </div>
-                                        <ReactCompareSliderImage alt="After" src="/images/templates/highlighted/1009.jpg" />
+                                        <ReactCompareSliderImage alt="After" src="/images/comparison/after-tisain-1.jpg" />
                                     </div>}
                                 className="drop-shadow-[0_2.4rem_4.8rem_rgb(44,115,165,.3)] scale-[.95] hover:drop-shadow-[0_2.4rem_4.8rem_rgb(44,115,165,.5)] hover:scale-100 transition-all duration-100 ease-in-out h-auto rounded-2xl"
                                 position={50}

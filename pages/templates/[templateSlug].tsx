@@ -122,11 +122,11 @@ export default function TemplateDetail({ templateDetail, relatedTemplates, bgCol
 
   return (
     <>
-      <Header bgColor="bg-background" />
+      <Header />
       <main>
         <TemplateDetailHero title={templateDetail.title} author={templateDetail.author} tags={templateDetail.tags} slug={templateDetail.slug} />
         <TemplatePreview images={templateDetail.images} />
-        <TemplateGrid templates={relatedTemplates} header="Template Serupa"/>
+        <TemplateGrid templates={relatedTemplates} templatesLength={3} header="Template Serupa"/>
       </main>
       <FloatingWhatsappButton />
       <FooterCTABlock>

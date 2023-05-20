@@ -66,7 +66,7 @@ export default function PresentationDesignService() {
                     description="Buat audiens Anda terkesan dengan presentasi yang memukau."
                     pricingOptions={templatePricingOptions}
                     pricingDescription="Per 10 slides"
-                    cta={<CustomTemplateCTA />} />
+                    cta={<CustomTemplateCTA className="bg-transparent"/>} />
                 <ComparisonSection />
             </main>
             <FloatingWhatsappButton />

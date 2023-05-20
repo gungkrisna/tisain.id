@@ -34,6 +34,19 @@ export const TemplateHero = () => {
         shuffledImages.slice(imagesPerArray * 2)
     ];
 
+    const handleScrollToTemplateGrid = () => {
+        const templateGridSection = document.getElementById("section-template-grid");
+        if (templateGridSection) {
+            const navigationHeightRem = 9;
+            const baseFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+            const navigationHeight = navigationHeightRem * baseFontSize;
+            scroll.scrollTo(templateGridSection.offsetTop - navigationHeight, {
+                smooth: true,
+                duration: 500
+            });
+        }
+    };
+
     return (
         <section id="section-template-hero" className="bg-[#121212]" data-color="bg-[#121212]/60">
             <Container>
@@ -66,13 +79,15 @@ export const TemplateHero = () => {
 
                         <div className="flex mt-4 w-full flex-col md:flex-row justify-center md:justify-start gap-24 md:gap-4">
                             <SearchField placeholder="Cari template" />
-                            <Link to="section-template-grid" className="flex items-center justify-center md:justify-start gap-1 text-md text-white hover:underline hover:cursor-pointer"
-                                 spy={false} smooth={true} duration={500} >
+                            <div
+                                className="flex items-center justify-center md:justify-start gap-1 text-md text-white hover:underline hover:cursor-pointer"
+                                onClick={handleScrollToTemplateGrid}
+                            >
                                 <span>Tampilkan semua</span>
                                 <span>
                                     <AiOutlineArrowDown />
                                 </span>
-                            </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

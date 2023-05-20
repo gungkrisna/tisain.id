@@ -9,19 +9,19 @@ type StudyCase = {
 
 const studyCases: StudyCase[] = [
     {
-        image: "/images/study-case-1.png",
+        image: "/images/akademisi.png",
         title: "Akademisi",
         description:
             "Tak peduli apapun bidang studi Anda, kami dapat membantu Anda membuat presentasi yang sempurna tentang topik tersebut. Baik guru maupun siswa menggunakan layanan presentasi Tisain untuk mengekspresikan ide dan gagasan mereka.",
     },
     {
-        image: "/images/study-case-2.png",
+        image: "/images/business.png",
         title: "Bisnis",
         description:
             "Setiap tim pasti akan membutuhkan presentasi yang menarik perhatian untuk membuat dunia melihat usaha mereka. Penjualan, pemasaran, atau SDM, Tisain hadir dengan layanan presentasi kami untuk membantu keseluruhan bisnis Anda meraih kesuksesan.",
     },
     {
-        image: "/images/study-case-3.jpg",
+        image: "/images/event.png",
         title: "Event",
         description:
             "Manajemen event merupakan hal yang tak mudah khususnya dalam meraih perhatian banyak orang. Layanan event organizer Tisain dapat membantu Anda untuk berhasil menggelar acara yang tak terlupakan.",
