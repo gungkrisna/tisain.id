@@ -151,7 +151,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
                           setIsHamburgerMenuOpen(false);
                         }
                       }}
-                      image="/images/products/presentation-design.jpg"
+                      image="/images/products/presentation-design.png"
                       title="Desain Presentasi"
                       shadowColor={backgroundColor !== defaultBackgroundColor ? 'hover:shadow-white/20' : 'hover:shadow-black/50'}
                     />
