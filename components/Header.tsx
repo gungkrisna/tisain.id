@@ -96,8 +96,8 @@ export const Header = ({ bgColor }: HeaderProps) => {
                   "[&_li]:mx-6 [&_li]:border-b [&_li]:border-zinc-800",
                   "md:[&_li]:mx-2 md:[&_li]:border-none md:[&_li]:h-auto ",
 
-                  "[&_a:hover]:text-gray-300 [&_a]:flex [&_a]:h-navigation-height [&_a]:w-full [&_a]:items-center [&_a]:text-lg [&_a]:transition-[color, background-color, transform] [&_a]:duration-300",
-                  "md:[&_a]:rounded-lg md:[&_a]:text-lg md:[&_a]:transition-colors md:[&_a]:translate-y-0 md:[&_a]:h-auto md:[&_a]:px-4 md:[&_a]:py-1",
+                  "[&_a:hover]:text-gray-300 [&_a]:flex [&_a]:min-h-[9rem] [&_a]:w-full [&_a]:items-center [&_a]:text-lg [&_a]:transition-[color, background-color, transform] [&_a]:duration-300",
+                  "md:[&_a]:rounded-lg md:[&_a]:text-lg md:[&_a]:transition-colors md:[&_a]:translate-y-0 md:[&_a]:h-auto md:[&_a]:min-h-0 md:[&_a]:px-4 md:[&_a]:py-1",
                   backgroundColor !== defaultBackgroundColor ? "md:[&_a:hover]:bg-[#333333] md:[&_a:hover]:text-white" : "md:[&_a:hover]:bg-[#f2f2f2] md:[&_a:hover]:text-zinc-800",
 
                   isHamburgerMenuOpen
@@ -139,10 +139,8 @@ export const Header = ({ bgColor }: HeaderProps) => {
 
                 </li>
 
-
-
                 {isMobilePricingExpandVisible && (
-                  <li className="[&_a]:h-auto grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden py-4">
+                  <li className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden py-4">
                     <HeaderCard
                       href="/pricing/presentation-design-service"
                       onClick={() => {
