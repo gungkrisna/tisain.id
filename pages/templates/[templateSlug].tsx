@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { TemplateDetailHero } from "@/components/TemplateDetailHero";
 import { TemplatePreview } from "@/components/TemplatePreview";
 import { PrismaClient } from "@prisma/client";
+import Head from "next/head";
 
 const prisma = new PrismaClient();
 
@@ -14,6 +15,7 @@ interface TemplateDetail {
   slug: string;
   title: string;
   author: string;
+  thumbnail: string;
   images: {
     imageUrl: string;
   }[];
@@ -47,6 +49,7 @@ export async function getStaticProps({ params }: { params: { templateSlug: strin
         slug: template.slug,
         title: template.title,
         author: template.author,
+        thumbnail: template.thumbnail,
         images: template.images.map((image) => ({
           imageUrl: image.imageUrl,
         })),
@@ -122,11 +125,25 @@ export default function TemplateDetail({ templateDetail, relatedTemplates, bgCol
 
   return (
     <>
+      <Head>
+        <title>{templateDetail.title} - Tisain</title>
+        <meta content={`${templateDetail.title} - Tisain`} property="og:title" />
+        <meta content={`https://tisain.id/images/templates/${templateDetail.thumbnail}`} property="og:image" />
+        <meta content="Tisain merupakan professional design agency on-demand yang melayani pembuatan slide presentasi, pengetikan, dan event organizer terpercaya sesuai kebutuhan dan anggaran proyek Anda." name="description" />
+        <meta content="Tisain merupakan professional design agency on-demand yang melayani pembuatan slide presentasi, pengetikan, dan event organizer terpercaya sesuai kebutuhan dan anggaran proyek Anda." property="og:description" />
+
+        <meta name="twitter:image" content={`https://tisain.id/images/templates/${templateDetail.thumbnail}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${templateDetail.title} - Tisain`} />
+        <meta name="twitter:description" content="Tisain merupakan professional design agency on-demand yang melayani pembuatan slide presentasi, pengetikan, dan event organizer terpercaya sesuai kebutuhan dan anggaran proyek Anda." />
+
+        <link href={`https://tisain.id/templates/${templateDetail.slug}`} rel="canonical" />
+      </Head>
       <Header />
       <main>
         <TemplateDetailHero title={templateDetail.title} author={templateDetail.author} tags={templateDetail.tags} slug={templateDetail.slug} />
         <TemplatePreview images={templateDetail.images} />
-        <TemplateGrid templates={relatedTemplates} templatesLength={3} header="Template Serupa"/>
+        <TemplateGrid templates={relatedTemplates} templatesLength={3} header="Template Serupa" />
       </main>
       <FloatingWhatsappButton />
       <FooterCTABlock>

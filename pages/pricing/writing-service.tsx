@@ -6,6 +6,7 @@ import { ComparisonSection } from "@/components/ComparisonSection";
 import CustomTemplateCTA from "@/components/CustomTemplateCTA";
 import { useRouter } from 'next/router';
 import FloatingWhatsappButton from "@/components/FloatingWhatsAppButton";
+import Head from "next/head";
 
 type Package = {
     isPopular: boolean;
@@ -55,6 +56,20 @@ export default function WritingService() {
 
     return (
         <>
+            <Head>
+                <title>Harga Jasa Pengetikan Tisain</title>
+                <meta content="Harga Jasa Pengetikan Tisain" property="og:title" />
+                <meta content="https://tisain.id/images/meta-image.png" property="og:image" />
+                <meta content="Tisain merupakan professional design agency on-demand yang melayani pembuatan slide presentasi, pengetikan, dan event organizer terpercaya sesuai kebutuhan dan anggaran proyek Anda." name="description" />
+                <meta content="Tisain merupakan professional design agency on-demand yang melayani pembuatan slide presentasi, pengetikan, dan event organizer terpercaya sesuai kebutuhan dan anggaran proyek Anda." property="og:description" />
+
+                <meta name="twitter:image" content="https://tisain.id/images/meta-image.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Harga Jasa Pengetikan Tisain" />
+                <meta name="twitter:description" content="Tisain merupakan professional design agency on-demand yang melayani pembuatan slide presentasi, pengetikan, dan event organizer terpercaya sesuai kebutuhan dan anggaran proyek Anda." />
+
+                <link href="https://tisain.id/pricing/writing-service" rel="canonical" />
+            </Head>
             <Header />
             <main>
                 <PricingSection

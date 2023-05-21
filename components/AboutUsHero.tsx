@@ -9,7 +9,7 @@ type StudyCase = {
 
 const studyCases: StudyCase[] = [
     {
-        image: "/images/akademisi.png",
+        image: "/images/academic.png",
         title: "Akademisi",
         description:
             "Tak peduli apapun bidang studi Anda, kami dapat membantu Anda membuat presentasi yang sempurna tentang topik tersebut. Baik guru maupun siswa menggunakan layanan presentasi Tisain untuk mengekspresikan ide dan gagasan mereka.",

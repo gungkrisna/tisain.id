@@ -5,11 +5,11 @@ interface JoinUsSectionProps {
     className?: string;
 }
 
-const FreelanceSection = ({ className }: JoinUsSectionProps) => {
+const TalentSection = ({ className }: JoinUsSectionProps) => {
     return (
         <div className={`${className} bg-tisain `}>
             <Container>
-                <div className="relative py-12 overflow-hidden sm:py-16 lg:py-20">
+                <div className="relative py-12 overflow-visible sm:py-16 lg:py-20">
                     <div className="absolute inset-0">
                         <Image
                             className="object-contain object-right w-full h-full transform scale-125"
@@ -42,7 +42,7 @@ const FreelanceSection = ({ className }: JoinUsSectionProps) => {
                                             love to work with Tisain.
                                         </h1>
                                         <p className="mt-6 text-md font-normal font-regular text-white text-opacity-80 md:max-w-[70%]">
-                                            Tisain is an exclusive network of the top talent. Become one of our freelancers and get the chance to work with top companies and accelerate your career.
+                                            Tisain is an exclusive network of the top talent. Become one of our freelancers and seize the chance to collaborate with leading companies and propel your career to new heights.
                                         </p>
                                     </div>
 
@@ -50,52 +50,35 @@ const FreelanceSection = ({ className }: JoinUsSectionProps) => {
                                         <div className="flex ml-1 -space-x-2">
                                             <Image
                                                 className="object-cover inline-block w-12 h-12 rounded-full sm:w-14 sm:h-14 ring-[3px] ring-white"
-                                                src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Hitler_portrait_crop.jpg"
-                                                alt=""
+                                                src="/images/talents/talent-1.png"
+                                                alt="Tisain Talent 1"
                                                 width={56}
                                                 height={56}
+                                                priority
                                             />
                                             <Image
                                                 className="object-cover inline-block w-12 h-12 rounded-full sm:w-14 sm:h-14 ring-[3px] ring-white"
-                                                src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Hitler_portrait_crop.jpg"
-                                                alt=""
+                                                src="/images/talents/talent-2.png"
+                                                alt="Tisain Talent 2"
                                                 width={56}
                                                 height={56}
+                                                priority
                                             />
                                             <Image
                                                 className="object-cover inline-block w-12 h-12 rounded-full sm:w-14 sm:h-14 ring-[3px] ring-white"
-                                                src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Hitler_portrait_crop.jpg"
-                                                alt=""
+                                                src="/images/talents/talent-3.png"
+                                                alt="Tisain Talent 3"
                                                 width={56}
                                                 height={56}
+                                                priority
                                             />
                                             <Image
                                                 className="object-cover inline-block w-12 h-12 rounded-full sm:w-14 sm:h-14 ring-[3px] ring-white"
-                                                src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Hitler_portrait_crop.jpg"
-                                                alt=""
+                                                src="/images/talents/talent-4.png"
+                                                alt="Tisain Talent 4"
                                                 width={56}
                                                 height={56}
-                                            />
-                                            <Image
-                                                className="object-cover inline-block w-12 h-12 rounded-full sm:w-14 sm:h-14 ring-[3px] ring-white"
-                                                src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Hitler_portrait_crop.jpg"
-                                                alt=""
-                                                width={56}
-                                                height={56}
-                                            />
-                                            <Image
-                                                className="object-cover inline-block w-12 h-12 rounded-full sm:w-14 sm:h-14 ring-[3px] ring-white"
-                                                src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Hitler_portrait_crop.jpg"
-                                                alt=""
-                                                width={56}
-                                                height={56}
-                                            />
-                                            <Image
-                                                className="object-cover inline-block w-12 h-12 rounded-full sm:w-14 sm:h-14 ring-[3px] ring-white"
-                                                src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Hitler_portrait_crop.jpg"
-                                                alt=""
-                                                width={56}
-                                                height={56}
+                                                priority
                                             />
                                         </div>
                                         <p className="mt-4 text-sm font-regular text-white">
@@ -104,74 +87,68 @@ const FreelanceSection = ({ className }: JoinUsSectionProps) => {
                                     </div>
                                 </div>
 
-                                <div className="lg:col-span-2">
+                                <div className="lg:col-span-2 ">
                                     <p className="text-lg font-nunino font-medium text-white">
                                         Apply for screening
                                     </p>
-                                    <form
-                                        action="#"
-                                        method="POST"
-                                        className="mt-4 space-y-4"
-                                    >
+                                    <form action="/api/submitTalentApplication" method="POST" className="mt-4 space-y-4">
                                         <div>
-                                            <label htmlFor="" className="sr-only">
-                                                {" "}
-                                                Full name{" "}
+                                            <label htmlFor="fullName" className="sr-only">
+                                                Full name
                                             </label>
-                                            <div className="">
+                                            <div>
                                                 <input
                                                     type="text"
-                                                    name=""
-                                                    id=""
-                                                    className="block w-full px-4 py-3 text-base font-regular sm:py-3.5 sm:text-sm text-gray-900 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-gray-900 focus:border-gray-900"
+                                                    name="fullName"
+                                                    id="fullName"
+                                                    className="block w-full px-4 py-3 text-md sm:py-3.5 sm:text-sm text-gray-900 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-gray-900 focus:border-gray-900"
                                                     placeholder="Name"
                                                 />
                                             </div>
                                         </div>
 
                                         <div>
-                                            <label htmlFor="" className="sr-only">
-                                                {" "}
-                                                Email address{" "}
+                                            <label htmlFor="email" className="sr-only">
+                                                Email address
                                             </label>
-                                            <div className="">
+                                            <div>
                                                 <input
                                                     type="email"
-                                                    name=""
-                                                    id=""
-                                                    className="block w-full px-4 py-3 text-base font-regular sm:py-3.5 sm:text-sm text-gray-900 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-gray-900 focus:border-gray-900"
+                                                    name="email"
+                                                    id="email"
+                                                    className="block w-full px-4 py-3 text-md sm:py-3.5 sm:text-sm text-gray-900 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-gray-900 focus:border-gray-900"
                                                     placeholder="Email address"
                                                 />
                                             </div>
                                         </div>
 
                                         <div>
-                                            <label htmlFor="" className="sr-only">
-                                                {" "}
-                                                Portfolio/LinkedIn URL{" "}
+                                            <label htmlFor="portfolio" className="sr-only">
+                                                Portfolio/LinkedIn URL
                                             </label>
-                                            <div className="">
+                                            <div>
                                                 <input
                                                     type="url"
-                                                    name=""
-                                                    id=""
-                                                    className="block w-full px-4 py-3 text-base font-regular sm:py-3.5 sm:text-sm text-gray-900 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-gray-900 focus:border-gray-900"
+                                                    name="portfolio"
+                                                    id="portfolio"
+                                                    className="block w-full px-4 py-3 text-md sm:py-3.5 sm:text-sm text-gray-900 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-gray-900 focus:border-gray-900"
                                                     placeholder="Portfolio/LinkedIn URL"
                                                 />
                                             </div>
                                         </div>
 
                                         <div className="relative group">
-                                            <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"></div>
+                                            <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-white via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"></div>
 
                                             <button
                                                 type="submit"
-                                                className="relative inline-flex items-center justify-center w-full px-8 py-3 text-base sm:py-3.5 font-bold text-white transition-all duration-200 bg-gray-900 rounded-lg sm:text-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 border border-transparent"
+                                                className="relative inline-flex items-center justify-center w-full px-8 py-3 text-md sm:py-3.5 font-bold text-white transition-all duration-200 bg-gray-900 rounded-lg sm:text-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 border border-transparent"
                                             >
                                                 Send request
                                             </button>
                                         </div>
                                     </form>
+
 
                                     <div className="mt-8 sm:mt-12">
                                         <p className="text-xs font-bold font-strong tracking-widest text-white uppercase text-opacity-70">Featured on</p>
@@ -196,5 +173,5 @@ const FreelanceSection = ({ className }: JoinUsSectionProps) => {
     )
 }
 
-export default FreelanceSection;
+export default TalentSection;
 

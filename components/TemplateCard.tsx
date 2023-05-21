@@ -18,7 +18,7 @@ const TemplateCard: React.FC<TemplateCardProps> = ({ thumbnail, title, slug }) =
   const handleMouseLeave = () => setIsHovering(false);
 
   const renderThumbnail = thumbnail ? (
-    <Image src={`/images/templates/${thumbnail}`} alt={title!} width={1000} height={1000} />
+    <Image src={`/images/templates/${thumbnail}`} alt={title!} width={1000} height={1000} className="aspect-video" priority />
   ) : (
     <Skeleton className="w-full h-full aspect-video" />
   );
@@ -33,11 +33,11 @@ const TemplateCard: React.FC<TemplateCardProps> = ({ thumbnail, title, slug }) =
 
   const renderLink = slug ? (
     <Link href={`/templates/${slug}`} passHref>
-        <div className="relative overflow-hidden">
-          {renderThumbnail}
-          {isHovering && <div className="absolute top-0 bottom-0 w-full h-full bg-[rgba(0,0,0,.2)]" />}
-        </div>
-        <div className="p-6 h-40">{renderTitle}</div>
+      <div className="relative overflow-hidden">
+        {renderThumbnail}
+        {isHovering && <div className="absolute top-0 bottom-0 w-full h-full bg-[rgba(0,0,0,.2)]" />}
+      </div>
+      <div className="p-6 h-40">{renderTitle}</div>
     </Link>
   ) : (
     <div>
@@ -45,6 +45,7 @@ const TemplateCard: React.FC<TemplateCardProps> = ({ thumbnail, title, slug }) =
       <div className="p-6 h-40">{renderTitle}</div>
     </div>
   );
+
 
   return (
     <div

@@ -31,12 +31,12 @@ export const TemplateGrid = ({
             <Container>
                 <div className="flex flex-col w-full justify-center gap-4 py-16">
                     {header && (
-                        <Link href="/templates" className="flex flex-row justify-between items-center">
+                        <Link href="/templates" className="flex flex-row justify-between items-center gap-4">
                             <h3 className="font-nunito font-bold text-2xl md:text-3xl">{header}</h3>
-                            <div className="flex flex-row gap-2 items-center font-nunito font-medium text-lg cursor-pointer hover:text-tisain">
+                            <div className="flex flex-row gap-2 items-center font-nunito font-medium text-md cursor-pointer text-tisain hover:text-tisain/80">
                                 <p>Jelajahi</p>
                                 <span>
-                                    <BsArrowRight size={18} />
+                                    <BsArrowRight size={16} />
                                 </span>
                             </div>
                         </Link>

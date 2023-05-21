@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import Spotlight from "./Spotlight";
-import templatesData from "@/mockdata/templates.json"
 
 interface Props {
   placeholder: string;

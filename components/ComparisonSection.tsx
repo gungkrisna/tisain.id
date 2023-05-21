@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from "next/link";
-import { BsChevronRight } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import { ReactCompareSlider, ReactCompareSliderHandle, ReactCompareSliderImage } from "react-compare-slider";
 import Marquee from "react-fast-marquee";
 
@@ -20,41 +20,41 @@ export const ComparisonSection = () => {
                         <div className="flex flex-col">
                             <p className="font-regular text-white/70 text-md tracking-[.45rem] text-center">OUR WORK</p>
                             <h2 className="font-raleway text-transparent bg-clip-text bg-gradient-to-r from-[rgb(94,159,206)] to-white text-5xl leading-tight text-center mt-3">Visualisasi dan interaktivitas <br className="hidden md:block" /> merupakan prioritas Tisain</h2>
-                            <p className="font-regular text-white/70 text-center text-xl pt-6">Tim kami berpengalaman dalam membantu bisnis dan profesional <br className="hidden md:block" />menyampaikan gagasan mereka dengan lebih baik.</p>
-                            <Link href="/templates/" className="flex items-center justify-center gap-1 text-xl font-nunito font-semibold text-white hover:underline hover:cursor-pointer mt-12"
+                            <p className="font-regular text-white/70 text-center text-lg md:text-xl pt-6">Tim kami berpengalaman dalam membantu bisnis dan profesional <br className="hidden md:block" />menyampaikan gagasan mereka dengan lebih baik.</p>
+                            <Link href="/templates/" className="flex items-center justify-center gap-4 text-lg md:text-xl font-nunito font-semibold text-white hover:underline hover:cursor-pointer hover:text-white/80 mt-12"
                             >
                                 <span>Lihat lebih banyak</span>
                                 <span>
-                                    <BsChevronRight />
+                                    <BsArrowRight />
                                 </span>
                             </Link>
                         </div>
 
                         <div className="flex w-full my-16">
                             <ReactCompareSlider
-                                handle={<ReactCompareSliderHandle linesStyle={{ opacity: 0.5 }} />}
-                                boundsPadding={10}
+                                handle={<ReactCompareSliderHandle linesStyle={{ opacity: 0.8 }} />}
+                                boundsPadding={0}
                                 changePositionOnHover
                                 itemOne={
                                     <div className="flex items-center justify-center text-2xl filter grayscale">
-                                        <div className="absolute top-4 left-4">
-                                            <div className="bg-white w-auto h-auto rounded-xl py-1 px-2 md:py-2 md:px-4">
-                                                <p className="font-nunito font-semibold text-sm md:text-lg">Before</p>
+                                        <div className="absolute bottom-4 left-3">
+                                            <div className="bg-white/80 w-auto h-auto rounded-xl py-1 px-2 md:py-2 md:px-4">
+                                                <p className="font-nunito font-semibold text-[1rem] md:text-lg">Before</p>
                                             </div>
                                         </div>
-                                        <ReactCompareSliderImage alt="Before" src="/images/comparison/before-tisain-1.jpg"/>
+                                        <ReactCompareSliderImage alt="Before" src="/images/comparison/before-tisain-1.jpg" />
                                     </div>
                                 }
                                 itemTwo={
                                     <div className="flex items-center justify-center text-2xl">
-                                        <div className="absolute top-4 right-4">
-                                            <div className="bg-white w-auto h-auto rounded-xl py-1 px-2 md:py-2 md:px-4">
-                                                <p className="font-nunito font-semibold text-sm md:text-lg">After</p>
+                                        <div className="absolute bottom-4 right-3">
+                                            <div className="bg-white/80 w-auto h-auto rounded-xl py-1 px-2 md:py-2 md:px-4">
+                                                <p className="font-nunito font-semibold text-[1rem] md:text-lg">After</p>
                                             </div>
                                         </div>
                                         <ReactCompareSliderImage alt="After" src="/images/comparison/after-tisain-1.jpg" />
                                     </div>}
-                                className="drop-shadow-[0_2.4rem_4.8rem_rgb(44,115,165,.3)] scale-[.95] hover:drop-shadow-[0_2.4rem_4.8rem_rgb(44,115,165,.5)] hover:scale-100 transition-all duration-100 ease-in-out h-auto rounded-2xl"
+                                className="drop-shadow-[0_2.4rem_4.8rem_rgb(44,115,165,.3)] scale-100 md:scale-[.95] hover:drop-shadow-[0_2.4rem_4.8rem_rgb(44,115,165,.5)] md:hover:scale-100 transition-all duration-100 ease-in-out h-auto rounded-2xl"
                                 position={50}
                             />
                         </div>

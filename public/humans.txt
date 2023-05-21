@@ -1,0 +1,12 @@
+/* TEAM */
+
+Creator: Tisain
+URL: https://tisain.id
+
+/* THANKS */
+
+RRSlide - https://rrslide.com/
+
+/* SITE */
+
+Vercel, Next.js 13, MySQL, Planetscale, Amazon SES, IDCloudHost

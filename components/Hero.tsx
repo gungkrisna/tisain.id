@@ -27,7 +27,7 @@ export const Hero = () => {
                                 <div className="text-zinc font-strong">Get Started</div>
                             </Button>
 
-                            <div className="mt-8 sm:mt-16">
+                            <div className="mt-8">
                                 <div className="flex items-center justify-center lg:justify-start">
                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path
@@ -56,27 +56,27 @@ export const Hero = () => {
                                     </svg>
                                 </div>
 
-                                <blockquote className="mt-6">
+                                <blockquote className="mt-3">
                                     <p className="text-lg font-bold text-gray-900 font-raleway">Best design agency in Bali!</p>
-                                    <p className="mt-3 text-sm leading-7 text-gray-600 font-nunito">Tisain telah membantu menyelesaikan segala kebutuhan desain dan pengetikan pada event saya, mulai dari membuat poster hingga mengatur susunan jalannya acara.</p>
+                                    <p className="mt-2 text-sm leading-7 text-gray-600 font-nunito">Tisain berperan penting dalam kesuksesan event saya, mulai dari membuat poster, menyediakan MC, hingga mengatur alur jalannya acara.</p>
                                 </blockquote>
 
                                 <div className="flex items-center justify-center mt-3 lg:justify-start ">
                                     <div className="relative h-6 w-6 aspect-square">
                                         <Image
-                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Kim_Jong-un_2019_%28cropped%29.jpg/230px-Kim_Jong-un_2019_%28cropped%29.jpg"
+                                            src="https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png"
                                             alt="User avatar"
                                             fill
                                             className="rounded-full object-cover"
                                         />
                                     </div>
-                                    <p className="ml-2 text-sm font-bold text-gray-900 font-nunito">I Wayan Koster Jr.</p>
+                                    <p className="ml-2 text-sm font-bold text-gray-900 font-nunito">Rick Astley</p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="xl:col-span-1">
-                            <Image className="w-full mx-auto" src="/images/hero.png" width={656} height={502} alt="Hero image" priority />
+                            <Image className="w-full mx-auto" src="/images/hero.png" width={3164} height={2298} quality={100} alt="Hero image" priority />
                         </div>
                     </div>
                 </div>
