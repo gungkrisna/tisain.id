@@ -4,14 +4,12 @@ import * as nodemailer from "nodemailer";
 import sesTransport from "nodemailer-ses-transport";
 
 aws.config.update({
-  apiVersion: "2010-12-01",
-  signatureVersion: 'v4',
-  region: "ap-southeast-2",
   accessKeyId: process.env.AWS_ACCESS_KEY,
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  region: "us-east-1",
 });
 
-const ses = new aws.SES();
+const ses = new aws.SES({ apiVersion: "2010-12-01", region: "us-east-1" });
 
 const transporter = nodemailer.createTransport(
   sesTransport({
@@ -23,21 +21,39 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  if (req.method !== "POST") {
+    return res
+      .status(405)
+      .json({ succeeded: false, msg: "Method Not Allowed" });
+  }
+
   const { fullName, email, portfolio } = req.body;
+
+  const htmlContent = `
+  <html>
+    <body>
+      <h1>New talent application</h1>
+      <p><strong>Name:</strong> ${fullName}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Portfolio:</strong> <a href="${portfolio}">${portfolio}</a></p>
+    </body>
+  </html>
+`;
 
   try {
     const response = await transporter.sendMail({
-      from: "marketing@tisain.id",
+      from: "talent@tisain.id",
       to: "gungkrisna@outlook.com",
       subject: "New talent application",
-      text: `Name: ${fullName}\nEmail: ${email}\nPortfolio: ${portfolio}`,
+      html: htmlContent,
     });
 
     return response?.messageId
-      ? res.status(200).json({ ok: true })
-      : res.status(500).json({ ok: false, msg: "Failed to send email" });
-  } catch (error: any) {
-    console.log("ERROR", error.message);
-    return res.status(500).json({ ok: false, msg: "Failed to send email" });
+      ? res.status(200).json({ succeeded: true })
+      : res.status(500).json({ succeeded: false, msg: "Failed to send email" });
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ succeeded: false, msg: "Failed to send email" });
   }
 }

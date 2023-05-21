@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import axios from "axios";
 import Image from "next/image";
 import { Container } from "./Container";
 
@@ -5,12 +7,55 @@ interface JoinUsSectionProps {
     className?: string;
 }
 
+interface FormValues {
+    fullName: string;
+    email: string;
+    portfolio: string;
+}
+
+
 const TalentSection = ({ className }: JoinUsSectionProps) => {
+    const [alertMessage, setAlertMessage] = useState("");
+    const [isSucceeded, setIsSucceeded] = useState(false);
+
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        const formData = new FormData(event.currentTarget);
+        const fullName = formData.get("fullName") as string;
+        const email = formData.get("email") as string;
+        const portfolio = formData.get("portfolio") as string;
+
+        const formValues: FormValues = {
+            fullName,
+            email,
+            portfolio,
+        };
+
+        try {
+            const response = await axios.post<{ succeeded: boolean }>(
+                "/api/submitTalentApplication",
+                formValues
+            );
+
+            if (response.data.succeeded) {
+                setIsSucceeded(true);
+                setAlertMessage("Application submission has been sent");
+            } else {
+                setIsSucceeded(false);
+                setAlertMessage("Failed to send application submission");
+            }
+        } catch (error) {
+            setIsSucceeded(false);
+            setAlertMessage("Failed to send application submission");
+        }
+    };
+
     return (
-        <div className={`${className} bg-tisain `}>
+        <div className={`${className} bg-tisain w`}>
             <Container>
                 <div className="relative py-12 overflow-visible sm:py-16 lg:py-20">
-                    <div className="absolute inset-0">
+                    <div className="absolute inset-0 overflow-hidden">
                         <Image
                             className="object-contain object-right w-full h-full transform scale-125"
                             src="/images/vector/background-pattern-2.svg"
@@ -91,63 +136,74 @@ const TalentSection = ({ className }: JoinUsSectionProps) => {
                                     <p className="text-lg font-nunino font-medium text-white">
                                         Apply for screening
                                     </p>
-                                    <form action="/api/submitTalentApplication" method="POST" className="mt-4 space-y-4">
-                                        <div>
-                                            <label htmlFor="fullName" className="sr-only">
-                                                Full name
-                                            </label>
+                                    <div>
+                                        {alertMessage && (
+                                            <div
+                                                className={`alert text-md ${isSucceeded ? 'bg-green-100 text-green-900' : 'bg-yellow-100 text-yellow-900'
+                                                    } py-3 px-4 mt-4 rounded-lg`}
+                                            >
+                                                {alertMessage}
+                                            </div>
+                                        )}
+
+                                        <form
+                                            className="mt-4 space-y-4"
+                                            onSubmit={handleSubmit}
+                                        >
                                             <div>
+                                                <label htmlFor="fullName" className="sr-only">
+                                                    Full name
+                                                </label>
                                                 <input
                                                     type="text"
                                                     name="fullName"
                                                     id="fullName"
                                                     className="block w-full px-4 py-3 text-md sm:py-3.5 sm:text-sm text-gray-900 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-gray-900 focus:border-gray-900"
                                                     placeholder="Name"
+                                                    required
                                                 />
                                             </div>
-                                        </div>
 
-                                        <div>
-                                            <label htmlFor="email" className="sr-only">
-                                                Email address
-                                            </label>
                                             <div>
+                                                <label htmlFor="email" className="sr-only">
+                                                    Email address
+                                                </label>
                                                 <input
                                                     type="email"
                                                     name="email"
                                                     id="email"
                                                     className="block w-full px-4 py-3 text-md sm:py-3.5 sm:text-sm text-gray-900 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-gray-900 focus:border-gray-900"
                                                     placeholder="Email address"
+                                                    required
                                                 />
                                             </div>
-                                        </div>
 
-                                        <div>
-                                            <label htmlFor="portfolio" className="sr-only">
-                                                Portfolio/LinkedIn URL
-                                            </label>
                                             <div>
+                                                <label htmlFor="portfolio" className="sr-only">
+                                                    Portfolio/LinkedIn URL
+                                                </label>
                                                 <input
                                                     type="url"
                                                     name="portfolio"
                                                     id="portfolio"
                                                     className="block w-full px-4 py-3 text-md sm:py-3.5 sm:text-sm text-gray-900 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-gray-900 focus:border-gray-900"
                                                     placeholder="Portfolio/LinkedIn URL"
+                                                    required
                                                 />
                                             </div>
-                                        </div>
 
-                                        <div className="relative group">
-                                            <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-white via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"></div>
+                                            <div className="relative group">
+                                                <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-white via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"></div>
 
-                                            <button
-                                                type="submit"
-                                                className="relative inline-flex items-center justify-center w-full px-8 py-3 text-md sm:py-3.5 font-bold text-white transition-all duration-200 bg-gray-900 rounded-lg sm:text-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 border border-transparent"
-                                            >
-                                                Send request
-                                            </button>
-                                        </div>
-                                    </form>
+                                                <button
+                                                    type="submit"
+                                                    className="relative inline-flex items-center justify-center w-full px-8 py-3 text-md sm:py-3.5 font-bold text-white transition-all duration-200 bg-gray-900 rounded-lg sm:text-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 border border-transparent"
+                                                >
+                                                    Send request
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
 
 
                                     <div className="mt-8 sm:mt-12">
