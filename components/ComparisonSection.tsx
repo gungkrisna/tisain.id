@@ -42,7 +42,7 @@ export const ComparisonSection = () => {
                                                 <p className="font-nunito font-semibold text-[1rem] md:text-lg">Before</p>
                                             </div>
                                         </div>
-                                        <ReactCompareSliderImage alt="Before" src="/images/comparison/before-tisain-1.jpg" />
+                                        <ReactCompareSliderImage alt="Before" src="/images/comparison/before-tisain-1.jpg"/>
                                     </div>
                                 }
                                 itemTwo={

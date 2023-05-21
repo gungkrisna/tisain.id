@@ -68,6 +68,7 @@ export const Hero = () => {
                                             alt="User avatar"
                                             fill
                                             className="rounded-full object-cover"
+                                            priority
                                         />
                                     </div>
                                     <p className="ml-2 text-sm font-bold text-gray-900 font-nunito">Rick Astley</p>
@@ -76,7 +77,7 @@ export const Hero = () => {
                         </div>
 
                         <div className="xl:col-span-1">
-                            <Image className="w-full mx-auto" src="/images/hero.png" width={3164} height={2298} quality={100} alt="Hero image" priority />
+                            <Image className="w-full mx-auto" src="/images/hero.png" width={791} height={575} quality={100} alt="Hero image" priority />
                         </div>
                     </div>
                 </div>

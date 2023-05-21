@@ -57,12 +57,12 @@ export const TemplateHero = () => {
                                 <Marquee key={index} speed={index === 1 ? 5 : 10} gradient={true} gradientColor={[16, 16, 16]}>
                                     {images.map((image, index) => (
                                         <div key={index} className="m-2 max-w-[30rem] max-h-[30rem]">
-                                            <Image src={image} alt={`Template ${index + 1}`} width={1000} height={1000} priority />
+                                            <Image src={image} alt={`Template ${index + 1}`} width={1000} height={1000} quality={50} priority />
                                         </div>
                                     ))}
                                     {images.map((image, index) => (
                                         <div key={index} className="m-2 max-w-[30rem] max-h-[30rem]">
-                                            <Image src={image} alt={`Template ${index + 1}`} width={1000} height={1000} priority />
+                                            <Image src={image} alt={`Template ${index + 1}`} width={1000} height={1000} quality={50} priority />
                                         </div>
                                     ))}
                                 </Marquee>

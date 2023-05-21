@@ -41,7 +41,7 @@ export const Footer = ( { className }: FooterProps ) => {
                             Tisain.id merupakan penyedia layanan jasa desain slide presentasi profesional on-demand.
                         </div>
                         <div className="flex flex-row text-lg gap-4 mt-2 text-gray-200 [&_a:hover]:text-white [&_a:hover]:transition-colors">
-                            <Link href="https://instagram.com/tisain.id__" target="_blank">
+                            <Link href="https://instagram.com/tisain.id_" target="_blank">
                                 <RiInstagramLine size={30}/>
                             </Link>
                             <Link href="https://wa.me/+62881038352544" target="_blank">
