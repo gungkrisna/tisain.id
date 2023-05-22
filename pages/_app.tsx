@@ -56,8 +56,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2972a7" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#2972a7"></meta>
+        <meta name="msapplication-TileColor" content="#2972a7" />
+        <meta name="theme-color" content="#2972a7" />
       </Head>
       <main className={`${gtWalsheim.variable} ${raleway.variable} ${montserrat.variable} ${nunito.variable}`}>
         <Component {...pageProps} />

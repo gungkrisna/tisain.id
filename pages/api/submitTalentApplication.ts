@@ -30,7 +30,7 @@ export default async function handler(
   const { fullName, email, portfolio } = req.body;
 
   const htmlContent = `
-  <html>
+  <html lang="en-US">
     <body>
       <h1>New talent application</h1>
       <p><strong>Name:</strong> ${fullName}</p>

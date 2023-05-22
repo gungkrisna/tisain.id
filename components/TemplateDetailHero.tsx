@@ -42,7 +42,7 @@ export const TemplateDetailHero = ({
                         <div className="flex flex-col gap-2 md:w-1/4 mt-8 md:mt-0">
 
                             <Button href={`https://wa.me/+62881038352544?text=Halo saya mau pesan jasa desain presentasi dengan template ini https://tisain.id/templates/${slug}`} newTab className="inline-flex px-4 py-2 w-full" variant="use-template" size="large">
-                                <div className="flex items-center justify-center md:justify-between w-full gap-1 text-md text-white font-nunito font-bold">
+                                <div className="flex items-center justify-center md:justify-between w-full gap-1 text-md leading-tight text-white font-nunito font-bold">
                                     <span>Gunakan Template</span>
                                     <span>
                                         <BsArrowRight size={18} />

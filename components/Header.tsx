@@ -18,6 +18,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
   const defaultBackgroundColor = "bg-background/[.7]";
   const [backgroundColor, setBackgroundColor] = useState(bgColor ? bgColor : defaultBackgroundColor);
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const sections = document.querySelectorAll<HTMLElement>('[id^="section-"], [id^="page-"]');
@@ -41,10 +42,13 @@ export const Header = ({ bgColor }: HeaderProps) => {
 
   const [isPricingExpandVisible, setIsPricingExpandVisible] = useState(false);
   const [isMobilePricingExpandVisible, setIsMobilePricingExpandVisible] = useState(false);
+
   const handlePricingOnMouseEnter = () => {
     const isMobileBreakpoint = window.innerWidth < 768;
     if (!isMobileBreakpoint) {
       setIsPricingExpandVisible(true);
+    } else {
+      setIsPricingExpandVisible(false);
     }
   }
 
@@ -53,19 +57,34 @@ export const Header = ({ bgColor }: HeaderProps) => {
     if (isMobileBreakpoint) {
       setIsMobilePricingExpandVisible(!isMobilePricingExpandVisible);
     } else {
-      setIsPricingExpandVisible(true);
+      setIsPricingExpandVisible(true)
     }
   }
 
+
+  useEffect(() => {
+    const handleClickOutside = (event: TouchEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setIsPricingExpandVisible(false)
+      }
+    };
+
+    document.addEventListener("touchstart", handleClickOutside);
+    return () => {
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, []);
   return (
 
     <>
       {!isHamburgerMenuOpen && (
         <AnnouncementBar message="Tisain.id hadir di acara Bali Startup Expo 2023! Jangan lupa kunjungi tenant kami." link="https://balistartup.com/expo-2023/" />
       )}
-      <header className={`z-20 sticky top-0 left-0 w-full border-b font-regular text-white ${backgroundColor !== defaultBackgroundColor ? 'md:text-white' : 'md:text-black'} border-white/[0.08] backdrop-blur-md ${backgroundColor} `}>
+      <header
+        ref={headerRef}
+        className={`z-20 sticky top-0 left-0 w-full border-b font-regular text-white ${backgroundColor !== defaultBackgroundColor ? 'md:text-white' : 'md:text-black'} border-white/[0.08] backdrop-blur-md ${backgroundColor} `}>
         <Container className="flex h-navigation-height ">
-          <Link className="flex justify-start items-center" href="/">
+          <Link className="flex justify-start items-center" href="https://tisain.id/" aria-label="Tisain website">
             <TisainLogo
               className="w-md h-md mr-3"
               size={4}
@@ -126,8 +145,8 @@ export const Header = ({ bgColor }: HeaderProps) => {
                 </li>
                 <li>
 
-                  <a
-                    className="cursor-pointer"
+                  <div
+                    className={`cursor-pointer ${backgroundColor !== defaultBackgroundColor ? 'md:hover:bg-[#333333] md:hover:text-white' : 'md:hover:bg-[#f2f2f2] md:hover:text-zinc-800'} ${backgroundColor !== defaultBackgroundColor ? 'text-white' : ''} flex min-h-[9rem] w-full items-center text-lg transition-[color, background-color, transform] duration-300 md:rounded-lg md:text-lg md:transition-colors md:translate-y-0 md:h-auto md:min-h-0 md:px-4 md:py-1`}
                     onMouseEnter={handlePricingOnMouseEnter}
                     onClick={handlePricingOnClick}
                   >
@@ -135,7 +154,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
                       Pricing
                       {isMobilePricingExpandVisible ? <FiChevronUp size={18} /> : <FiChevronDown size={18} className="opacity-50" />}
                     </div>
-                  </a>
+                  </div>
 
                 </li>
 

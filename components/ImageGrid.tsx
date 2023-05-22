@@ -15,9 +15,8 @@ export const ImageGrid = ({ images }: ImageGridProps) => {
                 return (
                     <Image
                         key={index}
-                        width="0"
-                        height="0"
-                        sizes="100vw"
+                        width="960"
+                        height="540"
                         className="w-full h-auto opacity-[.15] hover:opacity-25 transition-opacity duration-300 ease-in-out"
                         src={image}
                         alt={`image grid ${index}`}

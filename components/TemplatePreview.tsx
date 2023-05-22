@@ -64,6 +64,7 @@ export const TemplatePreview = ({ images }: TemplatePreviewProps) => {
                                                 type="button"
                                                 className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10"
                                                 onClick={onClickHandler}
+                                                aria-label="Previous button"
                                             >
                                                 <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/50">
                                                     <IoIosArrowBack size={18} color="black" />
@@ -79,6 +80,7 @@ export const TemplatePreview = ({ images }: TemplatePreviewProps) => {
                                                 type="button"
                                                 className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10"
                                                 onClick={onClickHandler}
+                                                aria-label="Next button"
                                             >
                                                 <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/50">
                                                     <IoIosArrowForward size={18} color="black" />

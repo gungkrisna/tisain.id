@@ -12,8 +12,9 @@ const FloatingWhatsappButton = () => {
             variant="whatsapp-cta"
             size="xlarge"
             className="py-12 fixed bottom-6 right-6 z-[19] w-15 md:w-auto h-16 md:h-auto rounded-full text-xl flex gap-2 justify-center items-center"
+            aria-label="Chat WhatsApp"
         >
-            <span><BsWhatsapp size={22} /></span>
+            <span><BsWhatsapp size={22} aria-label="Whatsapp button" /></span>
             <span className="font-nunito text-lg hidden md:block">Chat</span>
         </Button>
     );

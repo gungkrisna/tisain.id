@@ -6,11 +6,11 @@ interface TisainLogoProps {
   dark?: boolean;
 }
 
-const TisainLogo: React.FC<TisainLogoProps> = ({ className = '', size = 1, dark = false }) => {
+const TisainLogo = ({ className = '', size = 1, dark = false }: TisainLogoProps) => {
   const fillColor = dark ? '#000' : '#fff';
 
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 225.47549438 327.30999756" className={className} style={{ width: `${size}rem` }}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 225.47549438 327.30999756" className={className} style={{ width: `${size}rem` }} aria-label="Tisain logo">
       <g id="Layer_2" data-name="Layer 2">
         <g id="Layer_1-2" data-name="Layer 1">
           <text className="font-montserrat tracking-wide font-extralight text-[5.08rem]" style={{ fill: fillColor }} transform="matrix(.92 0 0 1 0 228.21)">

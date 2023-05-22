@@ -49,7 +49,7 @@ export const WhyUsSection = () => {
                                     </div>
                                     <div className="flex flex-col text-center md:text-start md:max-w-sm">
                                         <h3 className="font-raleway text-white text-2xl ">{feature.title}</h3>
-                                        <p className="font-regular text-white/70 text-md pt-2">{feature.description}</p>
+                                        <p className="font-regular text-white/80 text-md pt-2">{feature.description}</p>
                                     </div>
                                 </div>
                             ))}

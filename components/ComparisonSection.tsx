@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import { ReactCompareSlider, ReactCompareSliderHandle, ReactCompareSliderImage } from "react-compare-slider";
 import Marquee from "react-fast-marquee";
+import Image from "next/image"
 
 const services = [
     "Presentation Design",
@@ -42,7 +43,7 @@ export const ComparisonSection = () => {
                                                 <p className="font-nunito font-semibold text-[1rem] md:text-lg">Before</p>
                                             </div>
                                         </div>
-                                        <ReactCompareSliderImage alt="Before" src="/images/comparison/before-tisain-1.jpg"/>
+                                        <Image width="1920" height="1080" alt="Before" src="/images/comparison/before-tisain-1.jpg" priority/>
                                     </div>
                                 }
                                 itemTwo={
@@ -52,7 +53,7 @@ export const ComparisonSection = () => {
                                                 <p className="font-nunito font-semibold text-[1rem] md:text-lg">After</p>
                                             </div>
                                         </div>
-                                        <ReactCompareSliderImage alt="After" src="/images/comparison/after-tisain-1.jpg" />
+                                        <Image width="1920" height="1080" alt="After" src="/images/comparison/after-tisain-1.jpg" priority/>
                                     </div>}
                                 className="drop-shadow-[0_2.4rem_4.8rem_rgb(44,115,165,.3)] scale-100 md:scale-[.95] hover:drop-shadow-[0_2.4rem_4.8rem_rgb(44,115,165,.5)] md:hover:scale-100 transition-all duration-100 ease-in-out h-auto rounded-2xl"
                                 position={50}

@@ -44,7 +44,7 @@ export const TemplateGrid = ({
 
                     
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
                         {isLoading ? (
                             Array.from({ length: templatesLength }).map((_, index) => (
                                 <TemplateCard key={index} />

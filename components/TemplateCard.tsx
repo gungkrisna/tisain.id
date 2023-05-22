@@ -11,22 +11,22 @@ interface TemplateCardProps {
   slug?: string;
 }
 
-const TemplateCard: React.FC<TemplateCardProps> = ({ thumbnail, title, slug }) => {
+const TemplateCard = ({ thumbnail, title, slug }: TemplateCardProps) => {
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseEnter = () => setIsHovering(true);
   const handleMouseLeave = () => setIsHovering(false);
 
   const renderThumbnail = thumbnail ? (
-    <Image src={`/images/templates/${thumbnail}`} alt={title!} width={1000} height={1000} className="aspect-video" priority />
+    <Image src={`/images/templates/${thumbnail}`} alt={title!} width={800} height={450} className="aspect-video" priority />
   ) : (
     <Skeleton className="w-full h-full aspect-video" />
   );
 
   const renderTitle = title ? (
-    <h5 className={`mb-2 text-lg font-medium leading-tight text-gray-800 line-clamp-2`}>
+    <p className={`mb-2 text-lg font-medium leading-tight text-gray-800 line-clamp-2`}>
       {title}
-    </h5>
+    </p>
   ) : (
     <Skeleton className="w-2/3 h-4 mb-1" count={2} />
   );

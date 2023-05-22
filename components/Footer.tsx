@@ -41,10 +41,10 @@ export const Footer = ( { className }: FooterProps ) => {
                             Tisain.id merupakan penyedia layanan jasa desain slide presentasi profesional on-demand.
                         </div>
                         <div className="flex flex-row text-lg gap-4 mt-2 text-gray-200 [&_a:hover]:text-white [&_a:hover]:transition-colors">
-                            <Link href="https://instagram.com/tisain.id_" target="_blank">
+                            <Link href="https://instagram.com/tisain.id_" target="_blank" aria-label="Instagram">
                                 <RiInstagramLine size={30}/>
                             </Link>
-                            <Link href="https://wa.me/+62881038352544" target="_blank">
+                            <Link href="https://wa.me/+62881038352544" target="_blank" aria-label="Instagram">
                                 <RiWhatsappLine size={30} />
                             </Link>
                         </div>
@@ -52,7 +52,7 @@ export const Footer = ( { className }: FooterProps ) => {
                     <div className="flex flex-wrap gap-12">
                         {footerLinks.map((column, index) => (
                             <div key={index} className="flex flex-col min-w-[18rem] text-md">
-                                <h3 className="font-medium mb-6">{column.title}</h3>
+                                <p className="font-medium mb-6">{column.title}</p>
                                 <ul>
                                     {column.links.map((link, index) => (
                                         <li key={index} className="[&_a]:last:mb-0">
@@ -64,7 +64,7 @@ export const Footer = ( { className }: FooterProps ) => {
                         ))}
                     </div>
                 </div>
-                <div className="mt-8 w-full text-gray-500">
+                <div className="mt-8 w-full text-gray-300">
                     Copyright © 2023 Tisain. All rights reserved.
                 </div>
 

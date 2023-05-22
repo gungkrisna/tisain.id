@@ -95,9 +95,8 @@ export const FooterCTABlock = ({ children }: FooterCTABlockProps) => {
                     <div className="mt-6 flex flex-col rounded-t-2xl border-[0.25rem] overflow-hidden border-white/25 border-solid border-b-0 ">
                         <Image
                             className="w-full h-auto"
-                            width="0"
-                            height="0"
-                            sizes="100vw"
+                            width="1920"
+                            height="216"
                             src={"/images/vector/slides_bg.png"}
                             alt="CTA slide image"
                             priority
@@ -125,11 +124,10 @@ export const FooterCTABlock = ({ children }: FooterCTABlockProps) => {
                                     <Slide index={index} key={index}>
                                         <Image
                                             className="w-[calc(100%-10px)] h-[calc(100%-20px)] md:w-[calc(100%-20px)] md:h-[calc(100%-10px)] mx-auto border-[0.05rem] md:border-[0.25rem] border-black/10 border-solid rounded-md md:rounded-2xl"
-                                            width={1920}
-                                            height={1080}
+                                            width={960}
+                                            height={540}
                                             src={image}
                                             alt={`Presentation ${index}`}
-                                            priority
                                         />
                                     </Slide>
                                 ))}

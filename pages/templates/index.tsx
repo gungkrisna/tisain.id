@@ -8,7 +8,6 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import Pagination from "@/components/Pagination";
 import CustomTemplateCTA from "@/components/CustomTemplateCTA";
-import { Container } from "@/components/Container";
 import Head from "next/head";
 
 interface TemplateData {

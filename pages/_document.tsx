@@ -4,7 +4,7 @@ export default class MyDocument extends Document {
     render() {
         const pageProps = this.props?.__NEXT_DATA__?.props?.pageProps;
         return (
-            <Html>
+            <Html lang="id-ID">
                 <Head />
                 <body className={ pageProps.bgColor }>
                     <Main />

@@ -28,9 +28,9 @@ export const TestimonialCard = ({ image, testimony, name, company, stars, classN
                             <Image src={image} alt={name} fill className="rounded-full object-cover " />
                         </div>
                         <div className="flex flex-col">
-                            <h5 className="text-md font-strong leading-tight text-gray-800 line-clamp-1">
+                            <p className="text-md font-strong leading-tight text-gray-800 line-clamp-1">
                                 {name}
-                            </h5>
+                            </p>
                             <p className="text-md font-regular text-gray-700 line-clamp-1">{company}</p>
                         </div>
                     </div>

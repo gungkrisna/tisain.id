@@ -64,25 +64,9 @@ const testimonialData = [
   },
 ];
 
-const StyledChevronLeft = styled(BsChevronLeft)`
-color: #6b7280;;
-&:hover {
-  color: #030712;
-  transition: colors;
-  duration: 300;
-}
-`;
+const StyledChevronLeft = styled(BsChevronLeft)``;
 
-const StyledChevronRight = styled(BsChevronRight)`
-color: #6b7280;
-opacity: 0.5;
-&:hover {
-  color: #030712;
-  transition: colors;
-  duration: 300;
-}
-`;
-
+const StyledChevronRight = styled(BsChevronRight)``;
 
 
 const settings = {
@@ -132,7 +116,7 @@ export const TestimonialSection = () => {
         <div className="relative">
           <StyledChevronLeft
             size={30}
-            className="cursor-pointer hidden lg:block absolute z-10 top-[50%]"
+            className="cursor-pointer hidden lg:block absolute z-10 top-[50%] text-gray-500 hover:text-black transition-colors duration-300"
             onClick={() => slider?.current?.slickPrev()}
           />
           <div className="relative max-w-[80vw] xl:max-w-[108rem] mx-auto">
@@ -152,7 +136,7 @@ export const TestimonialSection = () => {
           </div>
           <StyledChevronRight
             size={30}
-            className="cursor-pointer hidden lg:block absolute z-10 top-[50%] right-0"
+            className="cursor-pointer hidden lg:block absolute z-10 top-[50%] right-0 text-gray-500 hover:text-black transition-colors duration-300"
             onClick={() => slider?.current?.slickNext()}
           />
         </div>

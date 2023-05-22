@@ -111,6 +111,7 @@ const Pagination = ({
             {currentPage < totalPages && (
                 <Link
                     href={`/templates/?page=${currentPage + 1}`}
+                    aria-label="Next"
                     className="flex items-center justify-center w-8 h-8 mx-1 font-regular bg-gray-200 rounded-xl">
 
                     <FaChevronRight className="w-3 h-3 text-gray-600" />
