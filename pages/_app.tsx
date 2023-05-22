@@ -58,6 +58,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2972a7" />
         <meta name="msapplication-TileColor" content="#2972a7" />
         <meta name="theme-color" content="#2972a7" />
+        <meta name="google-site-verification" content="p2oyyri7aIuuKOjDR6DXeW2D6rBemTWO17EoePU3yuk" />
       </Head>
       <main className={`${gtWalsheim.variable} ${raleway.variable} ${montserrat.variable} ${nunito.variable}`}>
         <Component {...pageProps} />
