@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { page, perPage } = req.query;
-  const itemsPerPage = Number(perPage) || 9; // Number of templates per page
+  const itemsPerPage = Number(perPage) || 9;
   const currentPage = Number(page) || 1;
 
   const skip = (currentPage - 1) * itemsPerPage;

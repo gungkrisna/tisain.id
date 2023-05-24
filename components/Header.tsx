@@ -84,7 +84,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
         ref={headerRef}
         className={`z-20 sticky top-0 left-0 w-full border-b font-regular text-white ${backgroundColor !== defaultBackgroundColor ? 'md:text-white' : 'md:text-black'} border-white/[0.08] backdrop-blur-md ${backgroundColor} `}>
         <Container className="flex h-navigation-height ">
-          <Link className="flex justify-start items-center" href="https://tisain.id/" aria-label="Tisain website">
+          <Link className="flex justify-start items-center" href="https://tisain.id/" aria-label="Tisain website URL">
             <TisainLogo
               className="w-md h-md mr-3"
               size={4}

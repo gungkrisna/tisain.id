@@ -35,3 +35,7 @@ model Tag {
   templates Template[]
 }
 
+model keep_alive_table {
+  id      String @id
+  counter Int    @default(0)
+}
