@@ -78,7 +78,7 @@ export const Header = ({ bgColor }: HeaderProps) => {
 
     <>
       {!isHamburgerMenuOpen && (
-        <AnnouncementBar message="Tisain.id hadir di acara Bali Startup Expo 2023! Jangan lupa kunjungi tenant kami." link="https://balistartup.com/expo-2023/" />
+        <AnnouncementBar message="Kami meluncurkan template baru! " link="/templates" />
       )}
       <header
         ref={headerRef}

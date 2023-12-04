@@ -49,7 +49,7 @@ export const TemplatePreview = ({ images }: TemplatePreviewProps) => {
                                     images.map((image, index) => (
                                         <div key={index} className="w-full h-10 relative">
                                             <Image
-                                                src={`/images/templates/${image.imageUrl}`}
+                                                src={`${process.env.IMAGE_PATH}/${image.imageUrl}`}
                                                 fill
                                                 className="object-cover"
                                                 alt={`Slide ${index}`}
@@ -93,7 +93,7 @@ export const TemplatePreview = ({ images }: TemplatePreviewProps) => {
                             >
                                 {images.map((image, index) => (
                                     <div key={index} className="flex items-center justify-center text-2xl">
-                                        <Image src={`/images/templates/${image.imageUrl}`} height={1080} width={1920} alt={`Slide ${index}`} priority />
+                                        <Image src={`${process.env.IMAGE_PATH}/${image.imageUrl}`} height={1080} width={1920} alt={`Slide ${index}`} priority />
                                     </div>
                                 ))}
                             </Carousel>
